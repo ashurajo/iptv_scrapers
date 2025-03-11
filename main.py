@@ -1,6 +1,6 @@
 import tkinter as tk
 import logging
-from gui import IPTVScraperGUI  # 移除点号，使用简单导入
+from gui import IPTVScraperGUI
 from tonkiang_scraper import TonkiangScraper
 from config import VERSION, MAX_PAGE, LOG_CONFIG
 
@@ -11,7 +11,7 @@ def main():
         format='%(asctime)s - %(levelname)s - %(message)s',
         handlers=[
             logging.FileHandler(LOG_CONFIG['filename'], encoding='utf-8'),
-            logging.StreamHandler()  # 添加控制台处理器
+            logging.StreamHandler()
         ]
     )
     logging.info(f"启动频道工具 v{VERSION}")
