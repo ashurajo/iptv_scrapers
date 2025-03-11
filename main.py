@@ -4,24 +4,16 @@ from gui import IPTVScraperGUI  # 移除点号，使用简单导入
 from tonkiang_scraper import TonkiangScraper
 from config import VERSION, MAX_PAGE, LOG_CONFIG
 
-def setup_logging():
-    """配置日志系统"""
-    # 先清除所有已有的处理器，避免重复日志
-    root_logger = logging.getLogger()
-    for handler in root_logger.handlers[:]:
-        root_logger.removeHandler(handler)
-        
-    logging.basicConfig(
-        level=getattr(logging, LOG_CONFIG['level']),
-        format=LOG_CONFIG['format'],
-        handlers=[
-            logging.FileHandler(LOG_CONFIG['filename'], encoding='utf-8')
-            # 移除控制台处理器，让GUI自己处理日志显示
-        ]
-    )
 
 def main():
-    setup_logging()
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler(LOG_CONFIG['filename'], encoding='utf-8'),
+            logging.StreamHandler()  # 添加控制台处理器
+        ]
+    )
     logging.info(f"启动频道工具 v{VERSION}")
     
     root = tk.Tk()
@@ -32,3 +24,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# pyinstaller app.spec

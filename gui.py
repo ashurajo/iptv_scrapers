@@ -15,12 +15,15 @@ from bs4 import BeautifulSoup
 from base_scraper import IPTVChannel  # 修改为相对导入
 import traceback
 
+from config import LOG_CONFIG
+
 # 配置日志
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('script.log', encoding='utf-8'),
+        logging.FileHandler(LOG_CONFIG['filename'], encoding='utf-8'),
+
     ]
 )
 
