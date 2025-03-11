@@ -1,0 +1,6 @@
+Metadata-Version: 2.2
+Name: iptv_scrapers
+Version: 1.3.0
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Dynamic: requires-dist

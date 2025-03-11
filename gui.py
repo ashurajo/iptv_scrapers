@@ -12,7 +12,17 @@ from tkinter import ttk, scrolledtext, messagebox, filedialog
 import requests
 from bs4 import BeautifulSoup
 
-from .base_scraper import IPTVChannel
+from base_scraper import IPTVChannel  # 修改为相对导入
+import traceback
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('script.log', encoding='utf-8'),
+    ]
+)
 
 class IPTVScraperGUI:
     def __init__(self, root, version="1.3.0", max_page=5):
@@ -70,10 +80,11 @@ class IPTVScraperGUI:
 
     def _update_progress(self, status, current, total):
         """ 更新进度标签（线程安全） """
-        self.progress_label.config(
-            text=f"{status}: {current}/{total}",
-            foreground="#666" if status == "就绪" else "#2ecc71"
-        )
+        if self.progress_label:
+            self.progress_label.configure(
+                text=f"{status}: {current}/{total}",
+                foreground="#666" if status == "就绪" else "#2ecc71"
+            )
 
     def create_progress_label(self):
         # 在日志区域底部添加进度标签
@@ -103,18 +114,19 @@ class IPTVScraperGUI:
         ttk.Button(dialog, text="确定", command=lambda: self.save_proxy(dialog)).pack(pady=5)
 
     def save_proxy(self, dialog):
+        """保存代理设置"""
         proxy = self.proxy_entry.get().strip()
         if not proxy:
             self.proxy_enabled = False
             self.proxies = None
-            logging.info("已禁用代理")
+            logging.info("已禁用代理")  # 添加日志
             dialog.destroy()
             return
-
+    
         try:
             if not re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}:\d+$", proxy):
                 raise ValueError("无效的代理格式")
-
+    
             proxy_type = self.proxy_type.get()
             if proxy_type == "socks5":
                 self.proxies = {
@@ -126,9 +138,16 @@ class IPTVScraperGUI:
                     "http": f"http://{proxy}",
                     "https": f"http://{proxy}"
                 }
-
+    
             self.proxy_enabled = True
-            logging.info(f"代理设置成功: {proxy} ({proxy_type.upper()})")
+            logging.info(f"代理设置成功: {proxy} ({proxy_type.upper()})")  # 添加日志
+            
+            # 如果已经设置了爬虫，更新爬虫的代理设置
+            if hasattr(self, 'scraper') and self.scraper:
+                proxy_url = self.proxies['http'].split('://')[-1]
+                proxy_type = 'socks5' if 'socks5' in self.proxies['http'] else 'http'
+                self.scraper.set_proxy(proxy_url, proxy_type)
+                
             dialog.destroy()
         except Exception as e:
             messagebox.showerror("代理错误", f"无效的代理设置: {str(e)}")
@@ -277,27 +296,37 @@ class IPTVScraperGUI:
                 messagebox.showerror("保存失败", f"文件写入错误: {str(e)}")
 
     def setup_logging(self):
+        # 配置日志处理器
         class QueueHandler(logging.Handler):
             def __init__(self, log_queue):
                 super().__init__()
                 self.log_queue = log_queue
-
+        
             def emit(self, record):
                 msg = self.format(record)
                 self.log_queue.put(msg)
-
+        
+        # 创建并配置队列处理器
         qh = QueueHandler(self.log_queue)
         qh.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+        
+        # 直接添加到根日志记录器，与旧项目保持一致
         logging.getLogger().addHandler(qh)
-        self.root.after(100, self.poll_log_queue)
-
+        
+        # 启动日志轮询
+        self.poll_log_queue()
+    
     def poll_log_queue(self):
+        """轮询日志队列并更新GUI"""
         while not self.log_queue.empty():
-            msg = self.log_queue.get_nowait()
-            self.log_area.configure(state='normal')
-            self.log_area.insert(tk.END, msg + '\n')
-            self.log_area.configure(state='disabled')
-            self.log_area.see(tk.END)
+            try:
+                msg = self.log_queue.get_nowait()
+                self.log_area.configure(state='normal')
+                self.log_area.insert(tk.END, msg + '\n')
+                self.log_area.configure(state='disabled')
+                self.log_area.see(tk.END)
+            except queue.Empty:
+                break
         self.root.after(100, self.poll_log_queue)
 
     def save_results(self):
@@ -371,6 +400,7 @@ class IPTVScraperGUI:
             if enable_speed_test:
                 # 检查频道可用性
                 self.root.after(0, self._update_progress, "开始测速", 0, len(channels))
+                logging.info("开始测速检查频道可用性")  # 添加日志
                 accessible_channels = []
                 total = len(channels)
                 completed = 0
@@ -383,30 +413,34 @@ class IPTVScraperGUI:
                             channel, is_accessible = future.result(timeout=5)
                             if is_accessible:
                                 accessible_channels.append(channel)
+                                # 修改这里，使用 channel_name 而不是 name
+                                logging.debug(f"频道可用: {channel.channel_name} - {channel.url}")
                         except Exception as e:
                             logging.warning(f"测速任务异常: {str(e)}")
                         finally:
                             self.root.after(0, self._update_progress, "测速中", completed, total)
 
                 # 按响应时间排序
-                accessible_channels.sort(key=lambda x: x.response_time if x.response_time else float('inf'))
-                
+                accessible_channels.sort(key=lambda x: x.response_time)
+                logging.info(f"测速完成，共 {len(accessible_channels)}/{total} 个频道可用")  # 添加日志
+
                 result = {
                     "city": keyword,
-                    "channels": [self.channel_to_dict(c) for c in channels],
-                    "accessible_urls": [self.channel_to_dict(c) for c in accessible_channels]
+                    "channels": channels,
+                    "accessible_channels": accessible_channels
                 }
             else:
+                logging.info(f"未启用测速，共获取 {len(channels)} 个频道")  # 添加日志
                 result = {
                     "city": keyword,
-                    "channels": [self.channel_to_dict(c) for c in channels]
+                    "channels": channels
                 }
 
             self.result_queue.put(result)
             self.root.event_generate('<<ScrapingDone>>')
 
         except Exception as e:
-            self.result_queue.put({"error": f"脚本执行失败: {str(e)}\n{logging.traceback.format_exc()}"}) 
+            self.result_queue.put({"error": f"脚本执行失败: {str(e)}\n{traceback.format_exc()}"})
             self.root.event_generate('<<ScrapingDone>>')
         finally:
             self.running = False
@@ -449,10 +483,18 @@ class IPTVScraperGUI:
             self.start_btn.config(state=tk.NORMAL)
 
     def show_results(self, result):
-        for item in result.get('accessible_urls', result.get('channels', [])):
+        """显示结果到表格中"""
+        # 清空现有结果
+        self.tree.delete(*self.tree.get_children())
+        
+        # 获取要显示的频道列表
+        channels_to_show = result.get('accessible_channels', result.get('channels', []))
+        
+        for channel in channels_to_show:
             values = (
-                item.get('channel_name', ''),
-                item.get('url', ''),
-                f"{item.get('response_time', 0):.3f}s" if item.get('response_time') is not None else ''
+                getattr(channel, 'channel_name', ''),
+                getattr(channel, 'url', ''),
+                f"{getattr(channel, 'response_time', 0):.3f}s" if hasattr(channel, 'response_time') else ''
             )
+            
             self.tree.insert('', tk.END, values=values)
