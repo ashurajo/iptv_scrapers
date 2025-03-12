@@ -40,6 +40,8 @@ class IPTVScraperGUI:
         self.last_result = None
         self.proxy_enabled = False
         self.proxies = None
+        # 添加scrapers属性初始化
+        self.scrapers = {}
         
         # 请求头
         self.headers = {
@@ -159,6 +161,9 @@ class IPTVScraperGUI:
         # 输入区域
         input_frame = ttk.Frame(self.root, padding="10")
         input_frame.grid(row=0, column=0, sticky="ew")
+
+        self.control_frame = ttk.Frame(input_frame)
+        self.control_frame.grid(row=1, column=0, columnspan=8, sticky="ew", pady=5)
 
         ttk.Label(input_frame, text="频道:").grid(row=0, column=0, sticky="w")
         self.city_entry = ttk.Entry(input_frame, width=20)
@@ -351,13 +356,49 @@ class IPTVScraperGUI:
             except Exception as e:
                 messagebox.showerror("保存失败", f"文件写入错误: {str(e)}")
 
-    def set_scraper(self, scraper):
-        """设置IPTV爬虫实例"""
-        self.scraper = scraper
+    def set_scrapers(self, scrapers):
+        """设置多个抓取器"""
+        self.scrapers = scrapers
+        self.current_scraper = None
+        
+        # 添加源选择下拉框
+        self.source_frame = ttk.LabelFrame(self.control_frame, text="数据源")
+        self.source_frame.pack(fill="x", padx=5, pady=5)
+        
+        self.source_var = tk.StringVar(value="Tonkiang")
+        self.source_dropdown = ttk.Combobox(
+            self.source_frame, 
+            textvariable=self.source_var,
+            values=list(self.scrapers.keys()),
+            state="readonly"
+        )
+        self.source_dropdown.pack(fill="x", padx=5, pady=5)
+        self.source_dropdown.bind("<<ComboboxSelected>>", lambda e: self.set_scraper())
+        
+        # 初始化默认抓取器
+        self.set_scraper()
+    
+    def set_scraper(self):
+        """根据选择切换当前爬虫"""
+        selected = self.source_var.get()
+        self.current_scraper = self.scrapers[selected]
+        # 设置self.scraper为当前选择的爬虫实例
+        self.scraper = self.current_scraper
+        
+        # 更新界面元素
+        if selected == "Tonkiang":
+            self.page_spin.config(state="normal")
+            self.random_mode_var.set(True)
+        else:
+            # Allinone的特定设置
+            self.page_spin.config(state="disabled")
+            self.random_mode_var.set(False)
+        
+        # 如果启用了代理,需要为新选择的爬虫设置代理
         if self.proxy_enabled and self.proxies:
             proxy_url = self.proxies['http'].split('://')[-1]
             proxy_type = 'socks5' if 'socks5' in self.proxies['http'] else 'http'
-            scraper.set_proxy(proxy_url, proxy_type)
+            self.current_scraper.set_proxy(proxy_url, proxy_type)
 
     def start_scraping(self):
         if self.running:
