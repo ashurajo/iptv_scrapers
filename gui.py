@@ -16,6 +16,7 @@ from base_scraper import IPTVChannel  # 修改为相对导入
 import traceback
 
 from config import LOG_CONFIG
+from speed_tester import SpeedTester  # 添加新的导入
 
 # 配置日志
 logging.basicConfig(
@@ -188,8 +189,8 @@ class IPTVScraperGUI:
         self.start_btn = ttk.Button(input_frame, text="开始抓取", command=self.start_scraping)
         self.start_btn.grid(row=0, column=6, padx=5)
 
-        # 结果展示区域
-        result_frame = ttk.Frame(self.root, padding="10")
+        # 结果展示区域 - 添加LabelFrame
+        result_frame = ttk.LabelFrame(self.root, padding="10", text="频道列表")
         result_frame.grid(row=1, column=0, sticky="nsew")
 
         self.tree = ttk.Treeview(result_frame, columns=('channel', 'url', 'response'), show='headings')
@@ -205,8 +206,8 @@ class IPTVScraperGUI:
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
         self.tree.configure(yscrollcommand=scrollbar.set)
 
-        # 日志区域
-        log_frame = ttk.Frame(self.root, padding="10")
+        # 日志区域 - 添加LabelFrame
+        log_frame = ttk.LabelFrame(self.root, padding="10", text="日志信息")
         log_frame.grid(row=2, column=0, sticky="ew")
 
         self.log_area = scrolledtext.ScrolledText(log_frame, width=80, height=10)
@@ -442,39 +443,25 @@ class IPTVScraperGUI:
                 return
 
             if enable_speed_test:
-                # 检查频道可用性
-                self.root.after(0, self._update_progress, "开始测速", 0, len(channels))
-                logging.info("开始测速检查频道可用性")  # 添加日志
-                accessible_channels = []
-                total = len(channels)
-                completed = 0
-
-                with ThreadPoolExecutor(max_workers=20) as executor:
-                    futures = {executor.submit(self.check_channel, channel): channel for channel in channels}
-                    for future in as_completed(futures):
-                        completed += 1
-                        try:
-                            channel, is_accessible = future.result(timeout=5)
-                            if is_accessible:
-                                accessible_channels.append(channel)
-                                # 修改这里，使用 channel_name 而不是 name
-                                logging.debug(f"频道可用: {channel.channel_name} - {channel.url}")
-                        except Exception as e:
-                            logging.warning(f"测速任务异常: {str(e)}")
-                        finally:
-                            self.root.after(0, self._update_progress, "测速中", completed, total)
-
-                # 按响应时间排序
-                accessible_channels.sort(key=lambda x: x.response_time)
-                logging.info(f"测速完成，共 {len(accessible_channels)}/{total} 个频道可用")  # 添加日志
-
+                # 使用SpeedTester进行测速
+                speed_tester = SpeedTester(
+                    scraper=self.scraper,
+                    progress_callback=lambda status, current, total: self.root.after(0, self._update_progress, status, current, total)
+                )
+                accessible_channels, stats = speed_tester.test_channels(channels)
+                
+                # 将可访问的频道转换为字典列表，并同时存储为accessible_urls和accessible_channels
+                accessible_urls = [self.channel_to_dict(channel) for channel in accessible_channels]
+                
                 result = {
                     "city": keyword,
                     "channels": channels,
-                    "accessible_channels": accessible_channels
+                    "accessible_channels": accessible_channels,
+                    "accessible_urls": accessible_urls,  # 添加这一行，确保结果中包含accessible_urls键
+                    "stats": stats
                 }
             else:
-                logging.info(f"未启用测速，共获取 {len(channels)} 个频道")  # 添加日志
+                logging.info(f"未启用测速，共获取 {len(channels)} 个频道")
                 result = {
                     "city": keyword,
                     "channels": channels
