@@ -1,5 +1,5 @@
 # 全局配置
-VERSION = "1.3.1"  # 更新版本号为1.3.1
+VERSION = "1.3.2"
 MAX_PAGE = 5
 
 # 日志配置
@@ -37,7 +37,7 @@ TONKIANG_HEADERS = {
 
 # Allinone抓取器的请求头
 ALLINONE_HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
     'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
     'Connection': 'keep-alive',

@@ -5,8 +5,8 @@ import logging
 import requests
 from bs4 import BeautifulSoup
 from typing import List, Dict, Any
-from base_scraper import BaseIPTVScraper, IPTVChannel  # 移除点号
-from config import TONKIANG_HEADERS  # 移除点号
+from base_scraper import BaseIPTVScraper, IPTVChannel
+from config import TONKIANG_HEADERS
 
 class TonkiangScraper(BaseIPTVScraper):
     def __init__(self):

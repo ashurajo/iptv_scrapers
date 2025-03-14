@@ -1,7 +1,7 @@
 # -*- mode: python ; coding: utf-8 -*-
 
 # 手动设置版本号，而不是从config导入
-VERSION = "1.3.1"
+VERSION = "1.3.2"
 
 block_cipher = None
 

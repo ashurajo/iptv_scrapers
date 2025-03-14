@@ -268,17 +268,18 @@ class IPTVScraperGUI:
 
 版本: {self.version}
 作者: Skye
-编译日期: 2025-03-09
+编译日期: 2025-03-14
 更新:
-1.新增了随机抓取功能
+1.新增了ALLINONE抓取方式
 2.自动检测总页数
 3.检测深度开放到5
 4.修复了抓取实际只能抓一页的BUG
 
-免责声明:
-本工具仅供学习和研究使用，请勿用于任何商业用途。
-使用本工具所产生的一切法律责任由使用者自行承担。
-作者不对使用本工具导致的任何损失负责。"""
+免费软件声明：
+本软件为免费软件，仅供学习和研究使用。
+使用本软件时请遵守当地法律法规。
+开发者不对使用本软件产生的任何后果负责。
+禁止将本软件用于任何商业用途。"""
         messagebox.showinfo("关于", about_text)
 
     def export_valid_results(self):
@@ -390,8 +391,11 @@ class IPTVScraperGUI:
         if selected == "Tonkiang":
             self.page_spin.config(state="normal")
             self.random_mode_var.set(True)
+        elif selected == "Allinone":
+            self.page_spin.config(state="normal")
+            self.random_mode_var.set(True)
         else:
-            # Allinone的特定设置
+            # 其他源的特定设置
             self.page_spin.config(state="disabled")
             self.random_mode_var.set(False)
         
