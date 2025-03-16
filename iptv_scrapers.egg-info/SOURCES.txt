@@ -1,6 +1,0 @@
-setup.py
-iptv_scrapers.egg-info/PKG-INFO
-iptv_scrapers.egg-info/SOURCES.txt
-iptv_scrapers.egg-info/dependency_links.txt
-iptv_scrapers.egg-info/requires.txt
-iptv_scrapers.egg-info/top_level.txt
