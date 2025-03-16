@@ -1,0 +1,4 @@
+requests>=2.28.2
+beautifulsoup4>=4.12.2
+typing_extensions>=4.5.0
+pyinstaller>=5.13.0

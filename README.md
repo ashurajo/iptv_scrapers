@@ -30,7 +30,7 @@ iptv_scrapers/
 ## 快速开始
 ### 安装依赖
 ```text
-pip install -r requirements.txt
+pip freeze > requirements.txt
 ```
 ### 运行程序
 ```text
