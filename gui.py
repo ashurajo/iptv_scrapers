@@ -1,24 +1,16 @@
 import json
 import logging
 import queue
-import random
 import re
 import threading
-import time
 import tkinter as tk
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from tkinter import ttk, scrolledtext, messagebox, filedialog
-
 import requests
-from bs4 import BeautifulSoup
-
-from base_scraper import IPTVChannel  # 修改为相对导入
 import traceback
 
 from config import LOG_CONFIG
-from speed_tester import SpeedTester  # 添加新的导入
+from speed_tester import SpeedTester
 
-# 配置日志
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -41,10 +33,7 @@ class IPTVScraperGUI:
         self.last_result = None
         self.proxy_enabled = False
         self.proxies = None
-        # 添加scrapers属性初始化
         self.scrapers = {}
-        
-        # 请求头
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36',
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
@@ -58,8 +47,7 @@ class IPTVScraperGUI:
         self.create_proxy_controls()
         self.progress_label = None
         self.create_progress_label()
-        
-        # 绑定事件
+
         self.root.bind('<<ScrapingDone>>', self.on_scraping_done)
 
     def export_valid_txt(self):
@@ -93,13 +81,11 @@ class IPTVScraperGUI:
             )
 
     def create_progress_label(self):
-        # 在日志区域底部添加进度标签
         log_frame = self.root.grid_slaves(row=2, column=0)[0]
         self.progress_label = ttk.Label(log_frame, text="就绪")
         self.progress_label.pack(anchor="se")  # 固定在右下角
         
     def create_proxy_controls(self):
-        # 在输入区域添加代理按钮
         input_frame = self.root.grid_slaves(row=0, column=0)[0]
         self.proxy_btn = ttk.Button(input_frame, text="设置代理", command=self.show_proxy_dialog)
         self.proxy_btn.grid(row=0, column=7, padx=5)
@@ -125,7 +111,7 @@ class IPTVScraperGUI:
         if not proxy:
             self.proxy_enabled = False
             self.proxies = None
-            logging.info("已禁用代理")  # 添加日志
+            logging.info("已禁用代理")
             dialog.destroy()
             return
     
@@ -146,9 +132,8 @@ class IPTVScraperGUI:
                 }
     
             self.proxy_enabled = True
-            logging.info(f"代理设置成功: {proxy} ({proxy_type.upper()})")  # 添加日志
-            
-            # 如果已经设置了爬虫，更新爬虫的代理设置
+            logging.info(f"代理设置成功: {proxy} ({proxy_type.upper()})")
+
             if hasattr(self, 'scraper') and self.scraper:
                 proxy_url = self.proxies['http'].split('://')[-1]
                 proxy_type = 'socks5' if 'socks5' in self.proxies['http'] else 'http'
@@ -159,7 +144,7 @@ class IPTVScraperGUI:
             messagebox.showerror("代理错误", f"无效的代理设置: {str(e)}")
             
     def create_widgets(self):
-        # 输入区域
+
         input_frame = ttk.Frame(self.root, padding="10")
         input_frame.grid(row=0, column=0, sticky="ew")
 
@@ -177,7 +162,6 @@ class IPTVScraperGUI:
         self.page_spin.set(1)
         self.page_spin.grid(row=0, column=3, padx=5)
 
-        # 随机模式选择框移到抓取深度后面
         self.random_mode_var = tk.BooleanVar(value=True)
         self.random_mode_check = ttk.Checkbutton(input_frame, text="随机模式", variable=self.random_mode_var)
         self.random_mode_check.grid(row=0, column=4, padx=5)
@@ -189,7 +173,6 @@ class IPTVScraperGUI:
         self.start_btn = ttk.Button(input_frame, text="开始抓取", command=self.start_scraping)
         self.start_btn.grid(row=0, column=6, padx=5)
 
-        # 结果展示区域 - 添加LabelFrame
         result_frame = ttk.LabelFrame(self.root, padding="10", text="频道列表")
         result_frame.grid(row=1, column=0, sticky="nsew")
 
@@ -206,17 +189,15 @@ class IPTVScraperGUI:
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
         self.tree.configure(yscrollcommand=scrollbar.set)
 
-        # 日志区域 - 添加LabelFrame
         log_frame = ttk.LabelFrame(self.root, padding="10", text="日志信息")
         log_frame.grid(row=2, column=0, sticky="ew")
 
         self.log_area = scrolledtext.ScrolledText(log_frame, width=80, height=10)
         self.log_area.pack(fill=tk.BOTH, expand=True)
 
-        # 底部按钮
         btn_frame = ttk.Frame(self.root, padding="10")
         btn_frame.grid(row=3, column=0, sticky="e")
-        # 在现有按钮旁边添加新按钮
+
         self.export_txt_btn = ttk.Button(btn_frame, text="导出TXT",
                                       command=self.export_valid_txt,
                                       state=tk.DISABLED)
@@ -232,11 +213,9 @@ class IPTVScraperGUI:
         self.about_btn = ttk.Button(btn_frame, text="关于", command=self.show_about)
         self.about_btn.pack(side=tk.RIGHT, padx=5)
 
-        # 配置网格布局权重
         self.root.columnconfigure(0, weight=1)
         self.root.rowconfigure(1, weight=1)
 
-        # 创建右键菜单
         self.context_menu = tk.Menu(self.root, tearoff=0)
         self.context_menu.add_command(label="复制URL", command=self.copy_url)
         self.tree.bind("<Button-3>", self.show_context_menu)
@@ -306,7 +285,6 @@ class IPTVScraperGUI:
                 messagebox.showerror("保存失败", f"文件写入错误: {str(e)}")
 
     def setup_logging(self):
-        # 配置日志处理器
         class QueueHandler(logging.Handler):
             def __init__(self, log_queue):
                 super().__init__()
@@ -315,15 +293,12 @@ class IPTVScraperGUI:
             def emit(self, record):
                 msg = self.format(record)
                 self.log_queue.put(msg)
-        
-        # 创建并配置队列处理器
+
         qh = QueueHandler(self.log_queue)
         qh.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
-        
-        # 直接添加到根日志记录器，与旧项目保持一致
+
         logging.getLogger().addHandler(qh)
-        
-        # 启动日志轮询
+
         self.poll_log_queue()
     
     def poll_log_queue(self):
@@ -362,8 +337,7 @@ class IPTVScraperGUI:
         """设置多个抓取器"""
         self.scrapers = scrapers
         self.current_scraper = None
-        
-        # 添加源选择下拉框
+
         self.source_frame = ttk.LabelFrame(self.control_frame, text="数据源")
         self.source_frame.pack(fill="x", padx=5, pady=5)
         
@@ -376,15 +350,13 @@ class IPTVScraperGUI:
         )
         self.source_dropdown.pack(fill="x", padx=5, pady=5)
         self.source_dropdown.bind("<<ComboboxSelected>>", lambda e: self.set_scraper())
-        
-        # 初始化默认抓取器
+
         self.set_scraper()
     
     def set_scraper(self):
         """根据选择切换当前爬虫"""
         selected = self.source_var.get()
         self.current_scraper = self.scrapers[selected]
-        # 设置self.scraper为当前选择的爬虫实例
         self.scraper = self.current_scraper
         
         # 更新界面元素
@@ -395,11 +367,9 @@ class IPTVScraperGUI:
             self.page_spin.config(state="normal")
             self.random_mode_var.set(True)
         else:
-            # 其他源的特定设置
             self.page_spin.config(state="disabled")
             self.random_mode_var.set(False)
-        
-        # 如果启用了代理,需要为新选择的爬虫设置代理
+
         if self.proxy_enabled and self.proxies:
             proxy_url = self.proxies['http'].split('://')[-1]
             proxy_type = 'socks5' if 'socks5' in self.proxies['http'] else 'http'
@@ -440,7 +410,6 @@ class IPTVScraperGUI:
 
     def run_scraping(self, keyword, page_count, random_mode, enable_speed_test):
         try:
-            # 获取频道列表
             channels = self.scraper.fetch_channels(keyword, page_count, random_mode)
             if not channels:
                 self.result_queue.put({"error": "未提取到频道信息"})
@@ -453,15 +422,14 @@ class IPTVScraperGUI:
                     progress_callback=lambda status, current, total: self.root.after(0, self._update_progress, status, current, total)
                 )
                 accessible_channels, stats = speed_tester.test_channels(channels)
-                
-                # 将可访问的频道转换为字典列表，并同时存储为accessible_urls和accessible_channels
+
                 accessible_urls = [self.channel_to_dict(channel) for channel in accessible_channels]
                 
                 result = {
                     "city": keyword,
                     "channels": channels,
                     "accessible_channels": accessible_channels,
-                    "accessible_urls": accessible_urls,  # 添加这一行，确保结果中包含accessible_urls键
+                    "accessible_urls": accessible_urls,
                     "stats": stats
                 }
             else:
@@ -498,11 +466,11 @@ class IPTVScraperGUI:
 
     def on_scraping_done(self, event):
         try:
-            result = self.result_queue.get_nowait()  # 改为非阻塞获取
+            result = self.result_queue.get_nowait()
             if "error" in result:
                 messagebox.showerror("错误", result["error"])
             else:
-                self.last_result = result  # 存储结果到实例变量
+                self.last_result = result
                 self.show_results(result)
                 self.save_btn.config(state=tk.NORMAL)
                 # 如果有可访问的URL，启用导出有效节目按钮
@@ -519,10 +487,8 @@ class IPTVScraperGUI:
 
     def show_results(self, result):
         """显示结果到表格中"""
-        # 清空现有结果
         self.tree.delete(*self.tree.get_children())
-        
-        # 获取要显示的频道列表
+
         channels_to_show = result.get('accessible_channels', result.get('channels', []))
         
         for channel in channels_to_show:

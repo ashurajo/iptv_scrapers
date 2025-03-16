@@ -35,7 +35,6 @@ class TonkiangScraper(BaseIPTVScraper):
             raise
 
     def _extract_channels_from_html(self, html: str) -> List[IPTVChannel]:
-        """从HTML中提取频道信息"""
         channels = []
         soup = BeautifulSoup(html, 'html.parser')
         
@@ -77,7 +76,6 @@ class TonkiangScraper(BaseIPTVScraper):
         return channels
 
     def fetch_channels(self, keyword: str, page_count: int, random_mode: bool = True) -> List[IPTVChannel]:
-        """获取频道列表"""
         channels = []
         logging.info("开始提取频道信息")  # 添加日志
         city = self._get_city_param()
@@ -111,10 +109,8 @@ class TonkiangScraper(BaseIPTVScraper):
         
         # 获取实际的总页数
         max_available_pages = self._get_max_pages(soup)
-        
-        # 如果需要获取更多页面
+
         if page_count > 1:
-            # 先访问基础URL建立有效会话
             base_visit_url = f'{self.base_url}/?iptv={keyword}&l={l_param}'
             self.session.get(
                 base_visit_url, 
@@ -191,10 +187,8 @@ class TonkiangScraper(BaseIPTVScraper):
     def _get_max_pages(self, soup) -> int:
         """从页面中提取最大页数"""
         max_available_pages = 15  # 默认值
-        # 查找所有页面链接
         page_links = soup.find_all('a', href=re.compile(r'\?page=\d+.*$'))
         if page_links:
-            # 从所有页面链接中提取页码并找出最大值
             page_numbers = []
             for link in page_links:
                 page_match = re.search(r'page=(\d+)', link['href'])

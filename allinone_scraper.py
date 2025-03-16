@@ -7,7 +7,7 @@ from typing import List
 import requests
 from bs4 import BeautifulSoup
 from base_scraper import BaseIPTVScraper, IPTVChannel
-from config import ALLINONE_HEADERS  # 您需要在config.py中添加这个配置
+from config import ALLINONE_HEADERS
 
 class AllinoneScraper(BaseIPTVScraper):
     def __init__(self):
@@ -29,15 +29,12 @@ class AllinoneScraper(BaseIPTVScraper):
             url_tag = card.find('span', class_='link-text')
             channel_url = url_tag.get_text(strip=True) if url_tag else None
 
-            # 日期信息
             date_tag = card.find('span', class_='date-text')
             date = date_tag.get_text(strip=True) if date_tag else None
 
-            # 地区信息（根据新要求改为location-tag）
             location_tag = card.find('span', class_='location-tag') or card.find('span', class_='group-text')
             location = location_tag.get_text(strip=True) if location_tag else None
 
-            # 分辨率信息（提取title属性）
             res_tag = card.find('span', class_='resolution-text')
             resolution = res_tag['title'] if res_tag and res_tag.has_attr('title') else None
 
@@ -54,12 +51,10 @@ class AllinoneScraper(BaseIPTVScraper):
     def _get_max_pages(self, soup) -> int:
         """从分页控件获取最大页数"""
         try:
-            # 优先从input的max属性获取
             page_input = soup.find('input', {'name': 'page'})
             if page_input and page_input.has_attr('max'):
                 return int(page_input['max'])
 
-            # 备选方案：从最后的分页链接获取
             last_page = soup.find('a', href=re.compile(r'page=\d+$'))
             if last_page:
                 match = re.search(r'page=(\d+)', last_page['href'])
@@ -70,7 +65,7 @@ class AllinoneScraper(BaseIPTVScraper):
 
     def fetch_channels(self, keyword: str, page_count: int, random_mode: bool = True) -> List[IPTVChannel]:
         channels = []
-        logging.info("开始提取频道信息")  # 修改为与TonkiangScraper一致
+        logging.info("开始提取频道信息")
         try:
             url = f"{self.base_url}/search/?q={keyword}"
             response = self.session.get(
@@ -80,7 +75,7 @@ class AllinoneScraper(BaseIPTVScraper):
             )
 
             if response.status_code != 200:
-                logging.error(f"请求失败，状态码: {response.status_code}")  # 修改为与TonkiangScraper一致
+                logging.error(f"请求失败，状态码: {response.status_code}")
                 return channels
 
             # 解析第一页
@@ -88,12 +83,12 @@ class AllinoneScraper(BaseIPTVScraper):
             page_channels = self._extract_channels_from_html(response.text)
             channels.extend(page_channels)
             max_pages = self._get_max_pages(soup)
-            logging.info(f"第 1 页请求完毕，获取到 {len(page_channels)} 条数据，共 {max_pages} 页")  # 修改为与TonkiangScraper一致
+            logging.info(f"第 1 页请求完毕，获取到 {len(page_channels)} 条数据，共 {max_pages} 页")
 
             # 处理分页
             if page_count > 1:
                 pages_to_fetch = self._get_target_pages(page_count, max_pages, random_mode)
-                logging.info(f"随机模式{'已' if random_mode else '未'}启用，将从 {max_pages} 页中{'随机' if random_mode else ''}抓取以下页面：{pages_to_fetch}")  # 修改为与TonkiangScraper一致
+                logging.info(f"随机模式{'已' if random_mode else '未'}启用，将从 {max_pages} 页中{'随机' if random_mode else ''}抓取以下页面：{pages_to_fetch}")
 
                 for page in pages_to_fetch:
                     page_url = f"{self.base_url}/search/?q={keyword}&page={page}"
@@ -129,23 +124,23 @@ class AllinoneScraper(BaseIPTVScraper):
             )
 
             if response.status_code not in (200, 206):
-                logging.debug(f"无效响应[{response.status_code}]: {channel.url}")  # 添加注释
+                logging.debug(f"无效响应[{response.status_code}]: {channel.url}")   
                 return False
 
             chunk = response.raw.read(512, decode_content=True)
             if not chunk:
-                logging.debug(f"空数据响应: {channel.url}")  # 添加注释
+                logging.debug(f"空数据响应: {channel.url}")   
                 return False
 
             # 验证M3U8文件特征
             if b'#EXTM3U' in chunk[:128]:
-                logging.debug(f"检测到M3U8文件: {channel.url}")  # 添加注释
+                logging.debug(f"检测到M3U8文件: {channel.url}")   
 
             response_time = time.time() - start_time
             channel.response_time = response_time
             return True
         except Exception as e:
-            logging.debug(f"连接错误 {channel.url}: {str(e)}")  # 添加注释
+            logging.debug(f"连接错误 {channel.url}: {str(e)}")   
             return False
         finally:
             if 'response' in locals():
@@ -154,20 +149,18 @@ class AllinoneScraper(BaseIPTVScraper):
     def _get_max_pages(self, soup) -> int:
         """从分页控件获取最大页数"""
         try:
-            # 优先从input的max属性获取
             page_input = soup.find('input', {'name': 'page'})
             if page_input and page_input.has_attr('max'):
                 max_pages = int(page_input['max'])
-                logging.info(f"检测到总页数: {max_pages}")  # 添加与TonkiangScraper一致的日志
+                logging.info(f"检测到总页数: {max_pages}")   
                 return max_pages
 
-            # 备选方案：从最后的分页链接获取
             last_page = soup.find('a', href=re.compile(r'page=\d+$'))
             if last_page:
                 match = re.search(r'page=(\d+)', last_page['href'])
                 if match:
                     max_pages = int(match.group(1))
-                    logging.info(f"检测到总页数: {max_pages}")  # 添加与TonkiangScraper一致的日志
+                    logging.info(f"检测到总页数: {max_pages}")   
                     return max_pages
         except Exception as e:
             pass

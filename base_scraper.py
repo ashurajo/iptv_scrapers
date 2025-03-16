@@ -7,7 +7,6 @@ class IPTVChannel:
     def __init__(self, url, channel_name="", **kwargs):
         self.url = url
         self.channel_name = channel_name
-        # 添加 name 属性作为 channel_name 的别名
         self.name = channel_name
         self.date: Optional[str] = None
         self.location: Optional[str] = None
@@ -45,5 +44,4 @@ class BaseIPTVScraper(ABC):
 
     @property
     def name(self) -> str:
-        """获取数据源名称"""
         return self.__class__.__name__

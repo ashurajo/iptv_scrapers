@@ -7,30 +7,12 @@ from base_scraper import IPTVChannel, BaseIPTVScraper
 
 
 class SpeedTester:
-    """频道测速器类，负责测试IPTV频道的可用性和响应时间"""
     
     def __init__(self, scraper: BaseIPTVScraper, progress_callback: Callable[[str, int, int], None] | None = None):
-        """
-        初始化测速器
-        
-        Args:
-            scraper: 用于测试频道的抓取器实例
-            progress_callback: 进度回调函数，用于更新UI
-        """
         self.scraper = scraper
         self.progress_callback = progress_callback
     
     def test_channels(self, channels: List[IPTVChannel], max_workers: int = 20) -> Tuple[List[IPTVChannel], Dict[str, Any]]:
-        """
-        测试频道列表的可用性和响应时间
-        
-        Args:
-            channels: 要测试的频道列表
-            max_workers: 最大并发测试数量
-            
-        Returns:
-            Tuple[List[IPTVChannel], Dict]: 可访问的频道列表和结果统计
-        """
         if not channels:
             logging.warning("没有频道可供测试")
             return [], {"total": 0, "accessible": 0}
@@ -69,6 +51,5 @@ class SpeedTester:
         }
     
     def _check_channel(self, channel: IPTVChannel) -> Tuple[IPTVChannel, bool]:
-        """检查单个频道可用性"""
         is_accessible = self.scraper.check_channel_availability(channel)
         return channel, is_accessible

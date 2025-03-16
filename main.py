@@ -1,8 +1,9 @@
 import tkinter as tk
 import logging
 from gui import IPTVScraperGUI
+
+# 在此处添加新的抓取类
 from tonkiang_scraper import TonkiangScraper
-# 导入新的抓取器
 from allinone_scraper import AllinoneScraper
 from config import VERSION, MAX_PAGE, LOG_CONFIG
 
@@ -26,8 +27,7 @@ def main():
         "Tonkiang": TonkiangScraper(),
         "Allinone": AllinoneScraper()
     }
-    
-    # 使用set_scrapers方法设置抓取器，而不是直接设置属性
+
     if hasattr(app, 'set_scrapers'):
         app.set_scrapers(scrapers)
     else:
