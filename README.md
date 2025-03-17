@@ -3,7 +3,7 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-基于Python的IPTV频道抓取工具，支持多数据源搜索和速度测试。
+基于Python 3.12 的IPTV频道抓取工具，支持多数据源搜索和速度测试。
 
 ## 功能特性
 
