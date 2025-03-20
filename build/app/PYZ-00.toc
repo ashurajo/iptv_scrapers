@@ -1,0 +1,1 @@
+('D:\\Sky\\program\\python\\iptv_scrapers\\build\\app\\PYZ-00.pyz', [])
