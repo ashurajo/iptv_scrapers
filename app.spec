@@ -1,6 +1,6 @@
 # -*- mode: python ; coding: utf-8 -*-
 
-4|VERSION = "1.4.0"
+VERSION = "1.4.0"
 
 block_cipher = None
 
