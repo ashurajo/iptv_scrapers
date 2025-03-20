@@ -25,6 +25,7 @@ iptv_scrapers/
 │   ├── base_scraper.py  # 抓取器基类
 │   ├── tonkiang_scraper.py 
 │   └── allinone_scraper.py
+│   └── hacks_scraper.py
 └── build/               # 打包输出目录
 ```
 ## 快速开始
