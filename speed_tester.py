@@ -27,19 +27,37 @@ class SpeedTester:
         completed = 0
         
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            # 提交所有任务并获取future对象
             futures = {executor.submit(self._check_channel, channel): channel for channel in channels}
-            for future in as_completed(futures):
-                completed += 1
-                try:
-                    channel, is_accessible = future.result(timeout=5)
-                    if is_accessible:
-                        accessible_channels.append(channel)
-                        logging.debug(f"频道可用: {channel.channel_name} - {channel.url}")
-                except Exception as e:
-                    logging.warning(f"测速任务异常: {str(e)}")
-                finally:
-                    if self.progress_callback:
-                        self.progress_callback("测速中", completed, total)
+            
+            try:
+                for future in as_completed(futures, timeout=10):  # 总体超时
+                    completed += 1
+                    try:
+                        channel, is_accessible = future.result(timeout=5)  # 单个任务超时
+                        if is_accessible:
+                            accessible_channels.append(channel)
+                    except TimeoutError:
+                        logging.warning(f"任务执行超时")
+                    except Exception as e:
+                        logging.warning(f"测速任务异常: {str(e)}")
+                    finally:
+                        if self.progress_callback:
+                            self.progress_callback("测速中", completed, total)
+            except TimeoutError:
+                logging.error("测速总体执行超时")
+            finally:
+                # 强制关闭所有任务
+                for future in futures:
+                    future.cancel()
+                
+                # 立即关闭线程池，不等待任务完成
+                executor._threads.clear()
+                futures.clear()
+                
+                # 更新进度
+                if self.progress_callback:
+                    self.progress_callback("测速完成", total, total)
         
         # 按响应时间排序
         accessible_channels.sort(key=lambda x: x.response_time)

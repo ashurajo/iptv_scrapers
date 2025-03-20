@@ -1,5 +1,5 @@
 # 全局配置
-VERSION = "1.3.2"
+VERSION = "1.4.0"
 MAX_PAGE = 5
 
 # 日志配置
@@ -39,4 +39,15 @@ ALLINONE_HEADERS = {
 #     **DEFAULT_HEADERS,
 #     'specific-header': 'value'
 # }
+
+# 在config.py中添加Hacks的请求头配置
+HACKS_HEADERS = {
+    **DEFAULT_HEADERS,
+    'Connection': 'keep-alive',
+    'Sec-Fetch-Dest': 'empty',
+    'Sec-Fetch-Mode': 'cors',
+    'Sec-Fetch-Site': 'cross-site',
+    'Pragma': 'no-cache',
+    'Cache-Control': 'no-cache',
+}
 

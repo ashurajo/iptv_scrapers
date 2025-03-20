@@ -247,12 +247,11 @@ class IPTVScraperGUI:
 
 版本: {self.version}
 作者: Skye
-编译日期: 2025-03-14
+编译日期: 2025-03-20
 更新:
-1.新增了ALLINONE抓取方式
-2.自动检测总页数
-3.检测深度开放到5
-4.修复了抓取实际只能抓一页的BUG
+1.新增了hacks抓取方式
+2.修复了进程池溢出的问题
+3.修复了tonkiang抓取方式
 
 免费软件声明：
 本软件为免费软件，仅供学习和研究使用。
@@ -327,8 +326,23 @@ class IPTVScraperGUI:
         )
         if filepath:
             try:
+                # 创建可序列化的结果副本
+                serializable_result = self.last_result.copy()
+                
+                # 转换channels列表中的IPTVChannel对象为字典
+                if 'channels' in serializable_result:
+                    serializable_result['channels'] = [
+                        self.channel_to_dict(channel) for channel in serializable_result['channels']
+                    ]
+                
+                # 转换accessible_channels列表中的IPTVChannel对象为字典(如果存在)
+                if 'accessible_channels' in serializable_result:
+                    serializable_result['accessible_channels'] = [
+                        self.channel_to_dict(channel) for channel in serializable_result['accessible_channels']
+                    ]
+                
                 with open(filepath, 'w', encoding='utf-8') as f:
-                    json.dump(self.last_result, f, ensure_ascii=False, indent=4)
+                    json.dump(serializable_result, f, ensure_ascii=False, indent=4)
                 messagebox.showinfo("保存成功", f"文件已保存至：{filepath}")
             except Exception as e:
                 messagebox.showerror("保存失败", f"文件写入错误: {str(e)}")
@@ -366,6 +380,10 @@ class IPTVScraperGUI:
         elif selected == "Allinone":
             self.page_spin.config(state="normal")
             self.random_mode_var.set(True)
+        elif selected == "Hacks":
+            self.page_spin.config(state="disabled")
+            self.random_mode_check.config(state="disabled")
+            self.random_mode_var.set(False)
         else:
             self.page_spin.config(state="disabled")
             self.random_mode_var.set(False)
@@ -434,9 +452,12 @@ class IPTVScraperGUI:
                 }
             else:
                 logging.info(f"未启用测速，共获取 {len(channels)} 个频道")
+                # 添加转换为字典的步骤，以便未测速时也能导出
+                channels_dict = [self.channel_to_dict(channel) for channel in channels]
                 result = {
                     "city": keyword,
-                    "channels": channels
+                    "channels": channels,
+                    "accessible_urls": channels_dict  # 未测速时，所有频道都视为可访问
                 }
 
             self.result_queue.put(result)
@@ -465,21 +486,40 @@ class IPTVScraperGUI:
         return channel, is_accessible
 
     def on_scraping_done(self, event):
+        """抓取完成后的回调"""
+        self.start_btn.config(text="开始抓取", state=tk.NORMAL)
+        
         try:
             result = self.result_queue.get_nowait()
             if "error" in result:
                 messagebox.showerror("错误", result["error"])
-            else:
-                self.last_result = result
-                self.show_results(result)
+                return
+                
+            self.last_result = result
+            self.show_results(result)
+            
+            # 启用导出按钮 - 根据不同情况启用不同按钮
+            if 'stats' in result and 'accessible_urls' in result:
+                # 启用测速的情况下，所有导出按钮都可用
+                self.export_valid_btn.config(state=tk.NORMAL)
+                self.export_txt_btn.config(state=tk.NORMAL)
                 self.save_btn.config(state=tk.NORMAL)
-                # 如果有可访问的URL，启用导出有效节目按钮
-                if 'accessible_urls' in result and result['accessible_urls']:
-                    self.export_valid_btn.config(state=tk.NORMAL)
-                    self.export_txt_btn.config(state=tk.NORMAL)
-                else:
-                    self.export_valid_btn.config(state=tk.DISABLED)
-                    self.export_txt_btn.config(state=tk.DISABLED)
+            else:
+                # 未启用测速的情况下，只启用导出全部和保存按钮，不启用导出有效节目按钮
+                self.export_valid_btn.config(state=tk.DISABLED)
+                self.export_txt_btn.config(state=tk.NORMAL)
+                self.save_btn.config(state=tk.NORMAL)
+                
+            # 显示统计信息
+            if "stats" in result:
+                stats = result["stats"]
+                messagebox.showinfo("抓取完成", 
+                    f"共抓取 {stats['total']} 个频道，其中 {stats['accessible']} 个可用")
+            else:
+                # 未测速时显示总数
+                total = len(result.get('channels', []))
+                messagebox.showinfo("抓取完成", f"共抓取 {total} 个频道")
+                
         except queue.Empty:
             messagebox.showerror("错误", "未获取到有效结果")
         finally:
@@ -488,14 +528,18 @@ class IPTVScraperGUI:
     def show_results(self, result):
         """显示结果到表格中"""
         self.tree.delete(*self.tree.get_children())
-
-        channels_to_show = result.get('accessible_channels', result.get('channels', []))
+        
+        # 优先显示测速后的可访问频道，如果没有测速则显示所有频道
+        if 'accessible_channels' in result:
+            channels_to_show = result.get('accessible_channels', [])
+        else:
+            channels_to_show = result.get('channels', [])
         
         for channel in channels_to_show:
             values = (
                 getattr(channel, 'channel_name', ''),
                 getattr(channel, 'url', ''),
-                f"{getattr(channel, 'response_time', 0):.3f}s" if hasattr(channel, 'response_time') else ''
+                f"{getattr(channel, 'response_time', 0):.3f}s" if hasattr(channel, 'response_time') and channel.response_time else ''
             )
             
             self.tree.insert('', tk.END, values=values)

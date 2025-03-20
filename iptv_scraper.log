@@ -1,2 +1,730 @@
 2025-03-16 11:40:53,619 - INFO - 启动频道工具 v1.3.2
 2025-03-16 12:26:36,348 - INFO - 启动频道工具 v1.3.2
+2025-03-18 22:35:16,375 - INFO - 启动频道工具 v1.3.2
+2025-03-18 22:35:29,962 - ERROR - 请求失败，状态码: 404
+2025-03-18 22:36:49,598 - INFO - 启动频道工具 v1.3.2
+2025-03-18 22:36:59,230 - ERROR - 请求失败，状态码: 404https://iptvs.hacks.tools/search?q=5bGx5Lic5Y2r6KeG
+2025-03-18 22:40:41,549 - INFO - 启动频道工具 v1.3.2
+2025-03-18 22:40:59,084 - ERROR - 请求失败，状态码: 404https://iptvs.hacks.tools/search?q=5bGx5Lic5Y2r6KeG
+2025-03-18 22:42:41,133 - INFO - 启动频道工具 v1.3.2
+2025-03-18 22:42:46,763 - ERROR - 请求失败，状态码: 400
+2025-03-18 22:43:06,394 - INFO - 启动频道工具 v1.3.2
+2025-03-18 22:43:13,694 - ERROR - 请求失败，状态码: 400https://iptvs.hacks.tools/api/search?q=5bGx5Lic5Y2r6KeG
+2025-03-18 22:44:23,998 - INFO - 启动频道工具 v1.3.2
+2025-03-18 22:44:29,350 - INFO - 请求成功，获取到 68 条数据
+2025-03-18 22:44:29,350 - INFO - 开始测速检查频道可用性
+2025-03-18 22:44:34,162 - INFO - 测速完成，共 0/68 个频道可用
+2025-03-18 22:46:01,848 - INFO - 启动频道工具 v1.3.2
+2025-03-18 22:46:14,629 - INFO - 请求成功，获取到 76 条数据
+2025-03-18 22:46:14,629 - INFO - 开始测速检查频道可用性
+2025-03-18 22:46:22,168 - INFO - 测速完成，共 0/76 个频道可用
+2025-03-18 22:49:18,632 - INFO - 启动频道工具 v1.3.2
+2025-03-18 22:49:24,746 - INFO - 开始提取频道信息
+2025-03-18 22:49:27,538 - INFO - 成功获取动态city参数: <HTML>
+<HEAD>
+<TITLE>404 Not Found</TITLE>
+<BASE href="/error_docs/"><!--[if lte IE 6]></BASE><![endif]-->
+</HEAD>
+<BODY>
+<H1>Not Found</H1>
+The requested document was not found on this server.
+<P>
+<HR>
+<ADDRESS>
+Web Server at &#111;&#114;&#105;&#101;&#110;&#116;&#97;&#108;&#97;&#114;&#116;&#99;&#111;&#46;&#110;&#101;&#116;
+</ADDRESS>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'922589629dbfb978',t:'MTc0MjMwOTM2Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></BODY>
+</HTML>
+
+<!--
+   - Unfortunately, Microsoft has added a clever new
+   - "feature" to Internet Explorer. If the text of
+   - an error's message is "too small", specifically
+   - less than 512 bytes, Internet Explorer returns
+   - its own error message. You can turn that off,
+   - but it's pretty tricky to find switch called
+   - "smart error messages". That means, of course,
+   - that short error messages are censored by default.
+   - IIS always returns error messages that are long
+   - enough to make Internet Explorer happy. The
+   - workaround is pretty simple: pad the error
+   - message with a big comment like this to push it
+   - over the five hundred and twelve bytes minimum.
+   - Of course, that's exactly what you're reading
+   - right now.
+   -->
+2025-03-18 22:49:31,249 - INFO - 第 1 页请求完毕，获取到 3 条数据，共 1 页
+2025-03-18 22:49:31,250 - INFO - 检测到总页数: 110
+2025-03-18 22:49:31,251 - INFO - 开始测速检查频道可用性
+2025-03-18 22:49:34,327 - INFO - 测速完成，共 0/3 个频道可用
+2025-03-18 22:51:10,432 - INFO - 启动频道工具 v1.3.2
+2025-03-18 22:51:15,095 - INFO - 开始提取频道信息
+2025-03-18 22:51:15,799 - INFO - 成功获取动态city参数: fdf711246
+2025-03-18 22:51:19,002 - INFO - 第 1 页请求完毕，获取到 3 条数据，共 1 页
+2025-03-18 22:51:19,003 - INFO - 检测到总页数: 110
+2025-03-18 22:51:19,004 - INFO - 开始测速检查频道可用性
+2025-03-18 22:51:22,083 - INFO - 测速完成，共 0/3 个频道可用
+2025-03-18 22:54:50,334 - INFO - 启动频道工具 v1.3.2
+2025-03-18 22:55:17,990 - INFO - 代理设置成功: 127.0.0.1:7897 (HTTP)
+2025-03-18 22:55:24,297 - INFO - 开始提取频道信息
+2025-03-18 22:55:25,171 - INFO - 成功获取动态city参数: d9d80bda0
+2025-03-18 22:55:29,590 - INFO - 第 1 页请求完毕，获取到 3 条数据，共 2 页
+2025-03-18 22:55:29,591 - INFO - 检测到总页数: 334
+2025-03-18 22:55:31,836 - INFO - 随机模式已启用，将从 334 页中随机抓取以下页面：[166]
+2025-03-18 22:55:33,043 - INFO - 第 166 页请求完毕，获取到 3 条数据
+2025-03-18 22:55:33,043 - INFO - 开始测速检查频道可用性
+2025-03-18 22:55:34,884 - INFO - 测速完成，共 0/6 个频道可用
+2025-03-18 22:56:20,521 - INFO - 已禁用代理
+2025-03-18 23:01:19,757 - INFO - 启动频道工具 v1.3.2
+2025-03-18 23:01:32,536 - INFO - 启动频道工具 v1.3.2
+2025-03-18 23:01:43,110 - INFO - 开始提取频道信息
+2025-03-18 23:01:43,893 - INFO - 成功获取动态city参数: fdf711246
+2025-03-18 23:01:47,346 - INFO - 第 1 页请求完毕，获取到 3 条数据，共 2 页
+2025-03-18 23:01:47,349 - INFO - 检测到总页数: 110
+2025-03-18 23:01:49,751 - INFO - 随机模式已启用，将从 110 页中随机抓取以下页面：[68]
+2025-03-18 23:01:52,058 - INFO - 第 68 页请求完毕，获取到 3 条数据
+2025-03-18 23:01:52,058 - INFO - 开始测速检查频道可用性
+2025-03-18 23:01:55,139 - INFO - 测速完成，共 0/6 个频道可用
+2025-03-19 22:35:42,600 - INFO - 启动频道工具 v1.3.2
+2025-03-19 22:35:52,446 - INFO - 开始提取频道信息
+2025-03-19 22:35:56,329 - INFO - 检测到总页数: 679
+2025-03-19 22:35:56,329 - INFO - 第 1 页请求完毕，获取到 20 条数据，共 679 页
+2025-03-19 22:35:56,329 - INFO - 随机模式已启用，将从 679 页中随机抓取以下页面：[491]
+2025-03-19 22:36:00,056 - INFO - 第 491 页请求完毕，获取到 20 条数据
+2025-03-19 22:36:01,157 - INFO - 开始测速检查频道可用性
+2025-03-19 22:36:01,281 - WARNING - Connection pool is full, discarding connection: 171.213.135.54. Connection pool size: 10
+2025-03-19 22:36:01,281 - WARNING - Connection pool is full, discarding connection: 171.213.135.54. Connection pool size: 10
+2025-03-19 22:36:01,281 - WARNING - Connection pool is full, discarding connection: 171.213.135.54. Connection pool size: 10
+2025-03-19 22:36:01,283 - WARNING - Connection pool is full, discarding connection: 171.213.135.54. Connection pool size: 10
+2025-03-19 22:36:01,293 - WARNING - Connection pool is full, discarding connection: 171.213.135.54. Connection pool size: 10
+2025-03-19 22:36:01,293 - WARNING - Connection pool is full, discarding connection: 171.213.135.54. Connection pool size: 10
+2025-03-19 22:36:03,442 - WARNING - Connection pool is full, discarding connection: 220.184.243.49. Connection pool size: 10
+2025-03-19 22:36:03,442 - WARNING - Connection pool is full, discarding connection: 220.184.243.49. Connection pool size: 10
+2025-03-19 22:36:03,457 - WARNING - Connection pool is full, discarding connection: 220.184.243.49. Connection pool size: 10
+2025-03-19 22:36:03,457 - WARNING - Connection pool is full, discarding connection: 220.184.243.49. Connection pool size: 10
+2025-03-19 22:36:03,458 - WARNING - Connection pool is full, discarding connection: 220.184.243.49. Connection pool size: 10
+2025-03-19 22:36:03,473 - WARNING - Connection pool is full, discarding connection: 220.184.243.49. Connection pool size: 10
+2025-03-19 22:36:03,473 - WARNING - Connection pool is full, discarding connection: 220.184.243.49. Connection pool size: 10
+2025-03-19 22:36:05,564 - WARNING - Connection pool is full, discarding connection: 220.184.243.49. Connection pool size: 10
+2025-03-19 22:36:05,721 - WARNING - Connection pool is full, discarding connection: 171.213.135.54. Connection pool size: 10
+2025-03-19 22:36:05,724 - INFO - 测速完成，共 4/40 个频道可用
+2025-03-19 22:41:13,606 - INFO - 启动频道工具 v1.3.2
+2025-03-19 22:41:20,859 - INFO - 开始提取频道信息
+2025-03-19 22:41:23,128 - INFO - 检测到总页数: 20
+2025-03-19 22:41:23,128 - INFO - 第 1 页请求完毕，获取到 20 条数据，共 20 页
+2025-03-19 22:41:23,128 - INFO - 未启用测速，共获取 20 个频道
+2025-03-19 22:41:31,831 - INFO - 开始提取频道信息
+2025-03-19 22:41:32,654 - INFO - 成功获取动态city参数: aa23d9e7a
+2025-03-19 22:41:34,812 - INFO - 第 1 页请求完毕，获取到 3 条数据，共 1 页
+2025-03-19 22:41:34,813 - INFO - 检测到总页数: 10
+2025-03-19 22:41:34,813 - INFO - 未启用测速，共获取 3 个频道
+2025-03-19 22:41:39,983 - INFO - 开始提取频道信息
+2025-03-19 22:41:40,520 - INFO - 成功获取动态city参数: aa23d9e7a
+2025-03-19 22:41:41,646 - INFO - 第 1 页请求完毕，获取到 3 条数据，共 1 页
+2025-03-19 22:41:41,651 - INFO - 检测到总页数: 10
+2025-03-19 22:41:41,651 - INFO - 开始测速检查频道可用性
+2025-03-19 22:41:44,719 - INFO - 测速完成，共 0/3 个频道可用
+2025-03-19 22:45:07,210 - INFO - 启动频道工具 v1.3.2
+2025-03-19 22:45:14,107 - INFO - 开始提取频道信息
+2025-03-19 22:45:14,839 - INFO - 成功获取动态city参数: aa23d9e7a
+2025-03-19 22:45:17,619 - INFO - 第 1 页请求完毕，获取到 3 条数据，共 2 页
+2025-03-19 22:45:17,620 - INFO - 检测到总页数: 13
+2025-03-19 22:45:19,850 - INFO - 随机模式已启用，将从 13 页中随机抓取以下页面：[11]
+2025-03-19 22:45:20,636 - INFO - 第 11 页请求完毕，获取到 3 条数据
+2025-03-19 22:45:20,636 - INFO - 未启用测速，共获取 6 个频道
+2025-03-19 22:45:39,804 - INFO - 开始提取频道信息
+2025-03-19 22:45:42,686 - INFO - 检测到总页数: 19
+2025-03-19 22:45:42,686 - INFO - 第 1 页请求完毕，获取到 20 条数据，共 19 页
+2025-03-19 22:45:42,687 - INFO - 未启用测速，共获取 20 个频道
+2025-03-19 22:47:38,626 - INFO - 启动频道工具 v1.3.2
+2025-03-19 22:47:45,260 - INFO - 开始提取频道信息
+2025-03-19 22:47:46,055 - INFO - 成功获取动态city参数: aa23d9e7a
+2025-03-19 22:47:48,551 - INFO - 第 1 页请求完毕，获取到 3 条数据，共 1 页
+2025-03-19 22:47:48,552 - INFO - 检测到总页数: 10
+2025-03-19 22:47:48,552 - INFO - 未启用测速，共获取 3 个频道
+2025-03-19 22:48:03,486 - INFO - 启动频道工具 v1.3.2
+2025-03-19 22:48:26,510 - INFO - 请求成功，获取到 64 条数据
+2025-03-19 22:48:26,510 - INFO - 开始测速检查频道可用性
+2025-03-19 22:48:31,096 - INFO - 测速完成，共 0/64 个频道可用
+2025-03-19 22:52:28,166 - INFO - 启动频道工具 v1.3.2
+2025-03-19 22:52:33,407 - INFO - 开始提取频道信息
+2025-03-19 22:52:34,299 - INFO - 成功获取动态city参数: aa23d9e7a
+2025-03-19 22:52:37,003 - INFO - 第 1 页请求完毕，获取到 3 条数据，共 1 页
+2025-03-19 22:52:37,004 - INFO - 检测到总页数: 10
+2025-03-19 22:52:37,006 - INFO - 开始测速检查频道可用性
+2025-03-19 22:52:40,080 - INFO - 测速完成，共 0/3 个频道可用
+2025-03-19 22:52:42,754 - INFO - 请求成功，获取到 64 条数据
+2025-03-19 22:52:42,754 - INFO - 开始测速检查频道可用性
+2025-03-19 22:52:43,976 - WARNING - Connection pool is full, discarding connection: stream1.freetv.fun. Connection pool size: 10
+2025-03-19 22:52:43,978 - WARNING - Connection pool is full, discarding connection: stream1.freetv.fun. Connection pool size: 10
+2025-03-19 22:52:43,982 - WARNING - Connection pool is full, discarding connection: stream1.freetv.fun. Connection pool size: 10
+2025-03-19 22:52:43,983 - WARNING - Connection pool is full, discarding connection: stream1.freetv.fun. Connection pool size: 10
+2025-03-19 22:52:43,993 - WARNING - Connection pool is full, discarding connection: stream1.freetv.fun. Connection pool size: 10
+2025-03-19 22:52:44,004 - WARNING - Connection pool is full, discarding connection: stream1.freetv.fun. Connection pool size: 10
+2025-03-19 22:52:44,066 - WARNING - Connection pool is full, discarding connection: stream1.freetv.fun. Connection pool size: 10
+2025-03-19 22:52:44,177 - WARNING - Connection pool is full, discarding connection: stream1.freetv.fun. Connection pool size: 10
+2025-03-19 22:52:44,467 - WARNING - Connection pool is full, discarding connection: stream1.freetv.fun. Connection pool size: 10
+2025-03-19 22:52:48,928 - WARNING - Connection pool is full, discarding connection: stream1.freetv.fun. Connection pool size: 10
+2025-03-19 22:52:48,933 - INFO - 测速完成，共 0/64 个频道可用
+2025-03-19 22:55:51,240 - INFO - 启动频道工具 v1.3.2
+2025-03-19 22:55:59,333 - INFO - 请求成功，获取到 64 条数据
+2025-03-19 22:55:59,333 - INFO - 开始测速检查频道可用性
+2025-03-19 22:56:05,009 - INFO - 测速完成，共 0/64 个频道可用
+2025-03-19 23:02:52,602 - INFO - 启动频道工具 v1.3.2
+2025-03-19 23:03:05,018 - INFO - 请求成功，获取到 1732 条数据
+2025-03-19 23:03:05,018 - INFO - 开始测速检查频道可用性
+2025-03-19 23:03:47,299 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='3501776.xyz', port=35455): Read timed out. (read timeout=10)")': /itv/1000000005000265015.m3u8?cdn=ystenlive
+2025-03-19 23:03:48,524 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)': /live/cctv1/stream.m3u8
+2025-03-19 23:03:48,559 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)': /live/cctv1/stream.m3u8
+2025-03-19 23:03:49,726 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)': /live/cctv1/stream.m3u8
+2025-03-19 23:03:55,180 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)': /live/cctv1/stream.m3u8
+2025-03-19 23:03:57,088 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)': /live/cctv1/stream.m3u8
+2025-03-19 23:03:59,114 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EDD6FE13A0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /live/cctv1/stream.m3u8
+2025-03-19 23:04:04,746 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='tv.cdn5.rr.nu', port=80): Read timed out. (read timeout=10)")': /live/cctv1/stream.m3u8
+2025-03-19 23:04:06,205 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EDD72775C0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /live/cctv1/stream.m3u8
+2025-03-19 23:04:10,155 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EDD743DF70>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /live/cctv1/stream.m3u8
+2025-03-19 23:04:16,779 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EDD72DB980>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /live/cctv1/stream.m3u8
+2025-03-19 23:04:18,307 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EDD7155880>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /live/cctv1/stream.m3u8
+2025-03-19 23:04:22,477 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EDD72AA390>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /live/cctv1/stream.m3u8
+2025-03-19 23:07:08,464 - INFO - 启动频道工具 v1.3.2
+2025-03-19 23:07:15,958 - INFO - 请求成功，获取到 92 条数据
+2025-03-19 23:07:15,958 - INFO - 开始测速检查频道可用性
+2025-03-19 23:07:21,380 - INFO - 测速完成，共 90/92 个频道可用
+2025-03-19 23:07:43,989 - INFO - 已复制URL：https://stream1.freetv.fun/cctv14gao-qing-1.m3u8
+2025-03-19 23:07:54,689 - INFO - 已复制URL：https://stream1.freetv.fun/cctv142-2.m3u8
+2025-03-20 11:55:15,033 - INFO - 启动频道工具 v1.3.2
+2025-03-20 11:55:29,625 - INFO - 请求成功，获取到 68 条数据
+2025-03-20 11:55:29,625 - INFO - 开始测速检查频道可用性
+2025-03-20 11:55:31,378 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026FF3928230>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226456/index.m3u8
+2025-03-20 11:55:32,392 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026FF3929160>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226456/index.m3u8
+2025-03-20 11:55:34,403 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026FF38B8A10>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226456/index.m3u8
+2025-03-20 11:55:37,248 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000026FF392BCB0>, 'Connection to 110.7.131.129 timed out. (connect timeout=5)')': /tsfile/live/0131_1.m3u8?key=txiptv&playlive=1&authid=0
+2025-03-20 11:55:43,252 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000026FF398EA80>, 'Connection to 110.7.131.129 timed out. (connect timeout=5)')': /tsfile/live/0131_1.m3u8?key=txiptv&playlive=1&authid=0
+2025-03-20 11:55:50,268 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000026FF398FAA0>, 'Connection to 110.7.131.129 timed out. (connect timeout=5)')': /tsfile/live/0131_1.m3u8?key=txiptv&playlive=1&authid=0
+2025-03-20 11:57:21,256 - INFO - 启动频道工具 v1.3.2
+2025-03-20 11:57:27,263 - INFO - 请求成功，获取到 68 条数据
+2025-03-20 11:57:27,263 - INFO - 开始测速检查频道可用性
+2025-03-20 11:57:28,806 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FE026945C0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226456/index.m3u8
+2025-03-20 11:57:29,098 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FE026EEFC0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/yinhe/88888888/224/3221226456/index.m3u8
+2025-03-20 11:57:29,824 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FE026955B0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226456/index.m3u8
+2025-03-20 11:57:30,119 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FE026EF230>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/yinhe/88888888/224/3221226456/index.m3u8
+2025-03-20 11:57:31,825 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FE0271E630>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226456/index.m3u8
+2025-03-20 11:57:31,971 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001FE02697BF0>, 'Connection to 110.7.131.129 timed out. (connect timeout=3)')': /tsfile/live/0131_1.m3u8?key=txiptv&playlive=1&authid=0
+2025-03-20 11:57:32,120 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FE0271DAF0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/yinhe/88888888/224/3221226456/index.m3u8
+2025-03-20 11:57:33,040 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='39.164.160.249', port=9901): Read timed out. (read timeout=4)")': /tsfile/live/0131_1.m3u8
+2025-03-20 11:57:33,203 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='39.164.160.249', port=9901): Read timed out. (read timeout=4)")': /tsfile/live/0131_1.m3u8
+2025-03-20 11:57:35,977 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001FE02302510>, 'Connection to 110.7.131.129 timed out. (connect timeout=3)')': /tsfile/live/0131_1.m3u8?key=txiptv&playlive=1&authid=0
+2025-03-20 11:57:38,077 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='39.164.160.249', port=9901): Read timed out. (read timeout=4)")': /tsfile/live/0131_1.m3u8
+2025-03-20 11:57:38,251 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='39.164.160.249', port=9901): Read timed out. (read timeout=4)")': /tsfile/live/0131_1.m3u8
+2025-03-20 11:57:40,993 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001FE027397C0>, 'Connection to 110.7.131.129 timed out. (connect timeout=3)')': /tsfile/live/0131_1.m3u8?key=txiptv&playlive=1&authid=0
+2025-03-20 11:57:44,138 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='39.164.160.249', port=9901): Read timed out. (read timeout=4)")': /tsfile/live/0131_1.m3u8
+2025-03-20 11:57:44,292 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='39.164.160.249', port=9901): Read timed out. (read timeout=4)")': /tsfile/live/0131_1.m3u8
+2025-03-20 11:59:11,515 - INFO - 启动频道工具 v1.3.2
+2025-03-20 11:59:20,885 - INFO - 请求成功，获取到 58 条数据
+2025-03-20 11:59:20,886 - INFO - 开始测速检查频道可用性
+2025-03-20 11:59:22,126 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C6B6471B20>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/PLTV/88888888/8/3221226450/index.m3u8
+2025-03-20 11:59:22,287 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C6B63EBCE0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88888888/224/3221226900/1.m3u8?GuardEncType=2&accountinfo=~~V2.0~cYPi33WFyhvd6SjmqUKhJg~tP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
+2025-03-20 11:59:22,299 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C6B6268620>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88888888/224/3221226900/1.m3u8?GuardEncType=2&accountinfo=~~V2.0~cYPi33WFyhvd6SjmqUKhJg~tP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
+2025-03-20 11:59:23,145 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C6B6472240>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/PLTV/88888888/8/3221226450/index.m3u8
+2025-03-20 11:59:23,288 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C6B63EACF0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88888888/224/3221226900/1.m3u8?GuardEncType=2&accountinfo=~~V2.0~cYPi33WFyhvd6SjmqUKhJg~tP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
+2025-03-20 11:59:23,319 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C6B626ADB0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88888888/224/3221226900/1.m3u8?GuardEncType=2&accountinfo=~~V2.0~cYPi33WFyhvd6SjmqUKhJg~tP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
+2025-03-20 11:59:25,194 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C6B654A3C0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/PLTV/88888888/8/3221226450/index.m3u8
+2025-03-20 11:59:25,290 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C6B61B3C50>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88888888/224/3221226900/1.m3u8?GuardEncType=2&accountinfo=~~V2.0~cYPi33WFyhvd6SjmqUKhJg~tP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
+2025-03-20 11:59:25,323 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C6B5D60860>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88888888/224/3221226900/1.m3u8?GuardEncType=2&accountinfo=~~V2.0~cYPi33WFyhvd6SjmqUKhJg~tP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
+2025-03-20 11:59:26,471 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='39.164.160.249', port=9901): Read timed out. (read timeout=3)")': /tsfile/live/0122_1.m3u8
+2025-03-20 11:59:30,527 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='39.164.160.249', port=9901): Read timed out. (read timeout=3)")': /tsfile/live/0122_1.m3u8
+2025-03-20 11:59:35,560 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='39.164.160.249', port=9901): Read timed out. (read timeout=3)")': /tsfile/live/0122_1.m3u8
+2025-03-20 11:59:38,593 - INFO - 测速完成，共 54/58 个频道可用
+2025-03-20 11:59:54,796 - INFO - 已复制URL：https://stream1.freetv.fun/500c8a2a5efd75bc0794fd1be42f9cbf0031c9a86a28d4c7a3656c97568e242f.m3u8
+2025-03-20 12:00:40,532 - INFO - 已复制URL：https://stream1.freetv.fun/bei-jing-wei-shi-58.m3u8
+2025-03-20 12:01:01,647 - INFO - 已复制URL：https://stream1.freetv.fun/5e40b2e656954c5b54000099a9711fb4d3490e8ff31c5c857f85df49b4f4a8ba.m3u8
+2025-03-20 12:02:47,628 - INFO - 启动频道工具 v1.3.2
+2025-03-20 12:03:16,085 - INFO - 已禁用代理
+2025-03-20 12:04:49,077 - INFO - 启动频道工具 v1.3.2
+2025-03-20 12:05:05,451 - INFO - 请求成功，获取到 68 条数据
+2025-03-20 12:05:05,453 - INFO - 开始测速检查频道可用性
+2025-03-20 12:07:34,948 - INFO - 启动频道工具 v1.3.2
+2025-03-20 12:07:43,781 - INFO - 请求成功，获取到 68 条数据
+2025-03-20 12:07:43,784 - INFO - 开始测速检查频道可用性
+2025-03-20 12:07:48,620 - INFO - 测速完成，共 0/68 个频道可用
+2025-03-20 12:08:16,041 - INFO - 启动频道工具 v1.3.2
+2025-03-20 12:08:21,850 - INFO - 请求成功，获取到 68 条数据
+2025-03-20 12:08:21,851 - INFO - 开始测速检查频道可用性
+2025-03-20 12:08:26,161 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='stream1.freetv.fun', port=443): Read timed out. (read timeout=3)")': /619f6f15d9c243b386d10c9bedd82da6847bc8d1dd34cb686d9ed36ea5307b03.m3u8
+2025-03-20 12:10:25,948 - INFO - 启动频道工具 v1.3.2
+2025-03-20 12:10:36,170 - INFO - 请求成功，获取到 68 条数据
+2025-03-20 12:10:36,171 - INFO - 开始测速检查频道可用性
+2025-03-20 12:10:37,783 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D595EF9A00>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88888888/224/3221226244/1.m3u8?GuardEncType=2&accountinfo=~~V2.0~ycMz-PML_dQW8iLcNBkw7g~_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNMYCYLC04QAM6EBli1wTuET%2CEND
+2025-03-20 12:10:38,041 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D595F4D250>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/yinhe/88888888/224/3221226456/index.m3u8
+2025-03-20 12:10:38,133 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D595F6C3B0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/yinhe/88888888/224/3221226456/index.m3u8
+2025-03-20 12:10:38,798 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D595CDF740>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88888888/224/3221226244/1.m3u8?GuardEncType=2&accountinfo=~~V2.0~ycMz-PML_dQW8iLcNBkw7g~_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNMYCYLC04QAM6EBli1wTuET%2CEND
+2025-03-20 12:10:39,043 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D595F4D1F0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/yinhe/88888888/224/3221226456/index.m3u8
+2025-03-20 12:10:39,134 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D595F4C8F0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/yinhe/88888888/224/3221226456/index.m3u8
+2025-03-20 12:10:40,799 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D595F6D520>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88888888/224/3221226244/1.m3u8?GuardEncType=2&accountinfo=~~V2.0~ycMz-PML_dQW8iLcNBkw7g~_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNMYCYLC04QAM6EBli1wTuET%2CEND
+2025-03-20 12:10:41,022 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='39.164.160.249', port=9901): Read timed out. (read timeout=3)")': /tsfile/live/0131_1.m3u8
+2025-03-20 12:10:41,066 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D595F6DAF0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/yinhe/88888888/224/3221226456/index.m3u8
+2025-03-20 12:10:41,136 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D595F6D790>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/yinhe/88888888/224/3221226456/index.m3u8
+2025-03-20 12:10:45,089 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='39.164.160.249', port=9901): Read timed out. (read timeout=3)")': /tsfile/live/0131_1.m3u8
+2025-03-20 12:10:50,126 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='39.164.160.249', port=9901): Read timed out. (read timeout=3)")': /tsfile/live/0131_1.m3u8
+2025-03-20 12:11:44,518 - INFO - 启动频道工具 v1.3.2
+2025-03-20 12:11:54,447 - INFO - 请求成功，获取到 68 条数据
+2025-03-20 12:11:54,448 - INFO - 开始测速检查频道可用性
+2025-03-20 12:11:55,867 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E2220ADEB0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:11:56,005 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E222338AD0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88
+2025-03-20 12:11:56,881 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E2220AED20>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:11:57,006 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E2223396D0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88
+2025-03-20 12:11:58,892 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E22233B0B0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:11:59,008 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E2222C95E0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88
+2025-03-20 12:14:17,283 - INFO - 启动频道工具 v1.3.2
+2025-03-20 12:14:24,866 - INFO - 开始请求Hacks API: https://iptvs.hacks.tools/api/search?query=5bGx5Lic5Y2r6KeG
+2025-03-20 12:14:25,743 - INFO - 请求成功，获取到 68 条数据
+2025-03-20 12:14:25,743 - INFO - 开始测速检查频道可用性
+2025-03-20 12:14:26,715 - INFO - 检测到M3U8主播放列表: https://stream1.freetv.fun/4b9a2ba1fbdf93976890cee68a877827f99571cea805d44aeba818c6bec9c69d.m3u8
+2025-03-20 12:14:26,715 - INFO - 提取到真实URL: http://[2409:8087:1a01:df::4077]:80/ottrrs.hl.chinamobile.com/P
+2025-03-20 12:14:26,732 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000278148B0110>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:14:27,231 - INFO - 检测到M3U8主播放列表: https://stream1.freetv.fun/3405e9bb72355c2bda8dae501cec4dbfb402f4225df810d5643dc58793783542.m3u8
+2025-03-20 12:14:27,232 - INFO - 提取到真实URL: http://61.156.228.12:8154/tsfile/live/0131_1.m3u8
+2025-03-20 12:14:27,270 - INFO - 检测到M3U8主播放列表: https://stream1.freetv.fun/c5d7e1d2bdcefe510e4d8ef42acdf78c2e399133bad012c2c8a9125d832da5ee.m3u8
+2025-03-20 12:14:27,270 - INFO - 提取到真实URL: http://dassby.qqff.top:99/live/山东卫视高清/index.m3u8
+2025-03-20 12:14:27,321 - INFO - 检测到M3U8主播放列表: https://stream1.freetv.fun/77c364dc1a58ed62d710b1a31406649e63c3dc8fe28baebf8aa19fc2fc67bc41.m3u8
+2025-03-20 12:14:27,321 - INFO - 提取到真实URL: http://[2409:8087:1a01:df::4077]:80/ottrrs.hl.chinamobile.com/P
+2025-03-20 12:14:27,336 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000278148B16A0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:14:27,420 - INFO - 检测到M3U8主播放列表: https://stream1.freetv.fun/a601d199d151cb304d3b5bbfd8b0dcd0c0fcbfa73acd23894c79f71ec62fec45.m3u8
+2025-03-20 12:14:27,420 - INFO - 提取到真实URL: http://[2409:8087:1:20:20::2a]/otttv.bj.chinamobile.com/PLTV/88
+2025-03-20 12:14:27,446 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027814AE8440>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88
+2025-03-20 12:14:27,501 - INFO - 检测到M3U8主播放列表: https://stream1.freetv.fun/55f970d2b6a9d83f2fc0e2a1137a54a5a0b6d8959e55d9c710738d0cbab2b043.m3u8
+2025-03-20 12:14:27,501 - INFO - 提取到真实URL: http://110.7.131.129:8096/tsfile/live/0131_1.m3u8?key=txiptv&pl
+2025-03-20 12:14:27,524 - INFO - 检测到M3U8主播放列表: https://stream1.freetv.fun/4b9a2ba1fbdf93976890cee68a877827f99571cea805d44aeba818c6bec9c69d.m3u8
+2025-03-20 12:14:27,524 - INFO - 提取到真实URL: http://[2409:8087:1a01:df::4077]:80/ottrrs.hl.chinamobile.com/P
+2025-03-20 12:14:27,530 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000278149AFAA0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:14:27,555 - INFO - 检测到M3U8主播放列表: https://stream1.freetv.fun/shan-dong-wei-shi-76.m3u8
+2025-03-20 12:14:27,555 - INFO - 提取到真实URL: http://cssbyd.imwork.net:8082/hls/34/index.m3u8
+2025-03-20 12:14:27,680 - INFO - 检测到M3U8主播放列表: https://stream1.freetv.fun/aafb84247e0f934ae924ed6d837112d3de2c980fbb276812ff55c187a7b26460.m3u8
+2025-03-20 12:14:27,680 - INFO - 提取到真实URL: http://[2409:8087:1a01:df::4077]:80/ottrrs.hl.chinamobile.com/y
+2025-03-20 12:14:27,707 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027814B31310>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/y
+2025-03-20 12:14:27,734 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000278148B0500>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:14:28,337 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000278148B0AD0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:14:28,448 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027814AE8D40>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88
+2025-03-20 12:14:28,533 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027814AC6F60>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:14:28,708 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027814B31DC0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/y
+2025-03-20 12:14:29,485 - INFO - 无效内容: https://stream1.freetv.fun/shan-dong-wei-shi-9.ctv
+2025-03-20 12:14:29,485 - INFO - 无效内容: https://stream1.freetv.fun/db68a456e97be3bf478378d8ec158b7c24f2cadca4e6717665debd43d11bc076.ctv
+2025-03-20 12:14:29,755 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027814B32060>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:14:30,338 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000278149AD850>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:14:30,460 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000278148B31D0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88
+2025-03-20 12:14:30,511 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000027814AE9E20>, 'Connection to 110.7.131.129 timed out. (connect timeout=3)')': /tsfile/live/0131_1.m3u8?key=txiptv&pl
+2025-03-20 12:14:30,553 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027814B0CCB0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:14:30,723 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027814B0CF50>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/y
+2025-03-20 12:14:34,518 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000027814B0DCA0>, 'Connection to 110.7.131.129 timed out. (connect timeout=3)')': /tsfile/live/0131_1.m3u8?key=txiptv&pl
+2025-03-20 12:14:39,522 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000027814B0E270>, 'Connection to 110.7.131.129 timed out. (connect timeout=3)')': /tsfile/live/0131_1.m3u8?key=txiptv&pl
+2025-03-20 12:17:09,830 - INFO - 启动频道工具 v1.3.2
+2025-03-20 12:17:14,279 - INFO - 开始请求Hacks API: https://iptvs.hacks.tools/api/search?query=5bGx5Lic5Y2r6KeG
+2025-03-20 12:17:15,444 - INFO - 请求成功，获取到 68 条数据
+2025-03-20 12:17:15,447 - INFO - 开始测速检查频道可用性
+2025-03-20 12:17:16,654 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-47.m3u8
+2025-03-20 12:17:16,680 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-6.m3u8
+2025-03-20 12:17:16,691 - INFO - URL https://stream1.freetv.fun/c5d4b407f5bd662f8e09f05401f6fb313eb498c100530bcd01125ff95bd86201.m3u8
+2025-03-20 12:17:16,768 - INFO - URL https://stream1.freetv.fun/10c05004b0bd33b2a9b06524305964eca4b4f101210e8ec24152f914f8584229.m3u8
+2025-03-20 12:17:16,816 - INFO - URL https://stream1.freetv.fun/196467d6d76f4f4ac05307f14da9677536743a9fc0dfc30d0435ade95f10622d.m3u8
+2025-03-20 12:17:16,859 - INFO - URL https://stream1.freetv.fun/16beccb46f608524b3d3ae9bcb7410bce0bda616b5e850ccfc14753612f95a25.m3u8
+2025-03-20 12:17:16,861 - INFO - URL https://stream1.freetv.fun/5ce69f5a6cf677a3b0868591ae7b0d53b99c0d50c9674eb9698cada3f3bf81bf.m3u8
+2025-03-20 12:17:16,886 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-5.m3u8
+2025-03-20 12:17:16,889 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-50.m3u8
+2025-03-20 12:17:16,891 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-53.m3u8
+2025-03-20 12:17:16,894 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-45.m3u8
+2025-03-20 12:17:16,909 - INFO - URL https://stream1.freetv.fun/4b9a2ba1fbdf93976890cee68a877827f99571cea805d44aeba818c6bec9c69d.m3u8
+2025-03-20 12:17:16,998 - INFO - URL https://stream1.freetv.fun/bdfeedd9cee7f96badac91e6dac2992ed6cdbe112d4cd5fddd82979fc2c9d0a5.m3u8
+2025-03-20 12:17:16,998 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-7.m3u8
+2025-03-20 12:17:16,998 - INFO - URL https://stream1.freetv.fun/71a8a5f1faa71f531d0a2bf256fd0de1399bca53bbcec0b0582a05ef3cdebde3.m3u8
+2025-03-20 12:17:17,043 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-44.m3u8
+2025-03-20 12:17:17,056 - INFO - URL https://stream1.freetv.fun/8627361e487ab4314a40aafbac8d41dc1895c0636b51ac627f694d32aadf90e5.m3u8
+2025-03-20 12:17:17,074 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-3.m3u8
+2025-03-20 12:17:17,087 - INFO - URL https://stream1.freetv.fun/5bdb53d672473ab1ffc81e5aa19ddfdd0d370c2bc967a8bc2ad506e622bb0928.m3u8
+2025-03-20 12:17:17,089 - INFO - URL https://stream1.freetv.fun/619f6f15d9c243b386d10c9bedd82da6847bc8d1dd34cb686d9ed36ea5307b03.m3u8
+2025-03-20 12:17:17,109 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-48.m3u8
+2025-03-20 12:17:17,127 - INFO - URL https://stream1.freetv.fun/31ef39243b79bb4997d7de4cdd1c6babb9131d53bb0c333f4ccb94c9de178298.m3u8
+2025-03-20 12:17:17,245 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-37.m3u8
+2025-03-20 12:17:17,385 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-80.m3u8
+2025-03-20 12:17:17,387 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-35.m3u8
+2025-03-20 12:17:17,388 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-30.m3u8
+2025-03-20 12:17:17,397 - INFO - URL https://stream1.freetv.fun/36638514009ec08528b4761b13a14f0da50b5984fc79e1b2d48398fe0c3562b8.m3u8
+2025-03-20 12:17:17,406 - INFO - URL https://stream1.freetv.fun/3f4392ee150176519af9a365a3e8f636c85883e750679ccf60fbb59b6e208ab1.m3u8
+2025-03-20 12:17:17,445 - INFO - URL https://stream1.freetv.fun/3405e9bb72355c2bda8dae501cec4dbfb402f4225df810d5643dc58793783542.m3u8
+2025-03-20 12:17:17,448 - INFO - URL https://stream1.freetv.fun/dc02290595664312c49f235a7ddcc445db57176503feb01bbada820d1abda853.m3u8
+2025-03-20 12:17:17,485 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-10.m3u8
+2025-03-20 12:17:17,540 - INFO - URL https://stream1.freetv.fun/c5d7e1d2bdcefe510e4d8ef42acdf78c2e399133bad012c2c8a9125d832da5ee.m3u8
+2025-03-20 12:17:17,541 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-54.m3u8
+2025-03-20 12:17:17,661 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-70.m3u8
+2025-03-20 12:17:17,686 - INFO - URL https://stream1.freetv.fun/77c364dc1a58ed62d710b1a31406649e63c3dc8fe28baebf8aa19fc2fc67bc41.m3u8
+2025-03-20 12:17:17,721 - INFO - URL https://stream1.freetv.fun/c750ee30a144cca8c6ac7c5c694880e60d46e6dc756084042f67b49c3f51d277.m3u8
+2025-03-20 12:17:17,725 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-8.m3u8
+2025-03-20 12:17:17,741 - INFO - URL https://stream1.freetv.fun/77c364dc1a58ed62d710b1a31406649e63c3dc8fe28baebf8aa19fc2fc67bc41.m3u8
+2025-03-20 12:17:17,759 - INFO - URL https://stream1.freetv.fun/05089abb0c14bf16465dcb029719afd8bb24a1a2ef9692bf264557a43ddc5cd9.m3u8
+2025-03-20 12:17:17,763 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016CA1D4AC30>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:17:17,799 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-60.m3u8
+2025-03-20 12:17:17,804 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-41.m3u8
+2025-03-20 12:17:17,845 - INFO - URL https://stream1.freetv.fun/81a4a1600b213a26729f9e24d8381601889787ef3447b8a5dd0566e7e182b285.m3u8
+2025-03-20 12:17:17,851 - INFO - URL https://stream1.freetv.fun/ipv6-shan-dong-wei-shi-38.m3u8
+2025-03-20 12:17:17,852 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016CA1D4D280>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88
+2025-03-20 12:17:17,939 - INFO - URL https://stream1.freetv.fun/4b9a2ba1fbdf93976890cee68a877827f99571cea805d44aeba818c6bec9c69d.m3u8
+2025-03-20 12:17:17,950 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-72.m3u8
+2025-03-20 12:17:17,979 - INFO - URL https://stream1.freetv.fun/a601d199d151cb304d3b5bbfd8b0dcd0c0fcbfa73acd23894c79f71ec62fec45.m3u8
+2025-03-20 12:17:17,980 - INFO - URL https://stream1.freetv.fun/55f970d2b6a9d83f2fc0e2a1137a54a5a0b6d8959e55d9c710738d0cbab2b043.m3u8
+2025-03-20 12:17:17,994 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016CA1D4F560>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88
+2025-03-20 12:17:18,039 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-76.m3u8
+2025-03-20 12:17:18,041 - INFO - URL https://stream1.freetv.fun/bd6a37694e1efa04e8be59b8fe452686598c61d790803ad97b04339d271a5f93.m3u8
+2025-03-20 12:17:18,099 - INFO - URL https://stream1.freetv.fun/3b97ca6daa3a8451a385b7db783b1c5622e979ec500532a2ff7145e99e78fab5.m3u8
+2025-03-20 12:17:18,106 - INFO - URL https://stream1.freetv.fun/7f8eb18a1db9290ee3672412a3a9bd3c6016bc2de82815cf74bd9ddedbc89c0f.m3u8
+2025-03-20 12:17:18,189 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-61.m3u8
+2025-03-20 12:17:18,192 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-49.m3u8
+2025-03-20 12:17:18,279 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-74.m3u8
+2025-03-20 12:17:18,281 - INFO - URL https://stream1.freetv.fun/6ae72c2ed9e03972d255c19be7f49c4731d8c51bfd1dfc150e73a2d7a132235d.m3u8
+2025-03-20 12:17:18,388 - INFO - URL https://stream1.freetv.fun/aafb84247e0f934ae924ed6d837112d3de2c980fbb276812ff55c187a7b26460.m3u8
+2025-03-20 12:17:18,484 - INFO - URL https://stream1.freetv.fun/aafb84247e0f934ae924ed6d837112d3de2c980fbb276812ff55c187a7b26460.m3u8
+2025-03-20 12:17:18,533 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-14.m3u8
+2025-03-20 12:17:18,549 - INFO - URL https://stream1.freetv.fun/3e1e0c322f27f07b53308162d0629c956f569c879f3e1863ae85bc894c2e649d.m3u8
+2025-03-20 12:17:18,588 - INFO - URL https://stream1.freetv.fun/e4e33ebd0a08ad2688e769c32c2a54dd9676bead22ecb11a0a218975b1bf041b.m3u8
+2025-03-20 12:17:18,623 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-59.m3u8
+2025-03-20 12:17:18,668 - INFO - URL https://stream1.freetv.fun/db68a456e97be3bf478378d8ec158b7c24f2cadca4e6717665debd43d11bc076.ctv
+2025-03-20 12:17:18,669 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-9.ctv
+2025-03-20 12:17:18,696 - INFO - URL https://stream1.freetv.fun/f0cb6082fd6cad9f7b782dbe5c941ba2499ed9c6b0ee4260652bc743b142c502.m3u8
+2025-03-20 12:17:18,765 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-28.m3u8
+2025-03-20 12:17:18,778 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016CA1D4C170>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:17:18,871 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016CA1D4D4C0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88
+2025-03-20 12:17:18,979 - INFO - URL https://stream1.freetv.fun/d89dc67caadabc802b130e2040f1ded08f8a4cc50a30ec2878de7569bdad21be.m3u8
+2025-03-20 12:17:18,995 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016CA1D4F7D0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88
+2025-03-20 12:17:20,779 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016CA1C0C8C0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:17:20,874 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016CA1DCD070>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88
+2025-03-20 12:17:20,960 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000016CA1D4E420>, 'Connection to 110.7.131.129 timed out. (connect timeout=3)')': /tsfile/live/0131_1.m3u8?key=txiptv&pl
+2025-03-20 12:17:20,991 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000016CA1D4F230>, 'Connection to 110.7.131.129 timed out. (connect timeout=3)')': /tsfile/live/0131_1.m3u8?key=txiptv&pl
+2025-03-20 12:17:20,997 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016CA1DCE5D0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88
+2025-03-20 12:17:24,966 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000016CA1D4BF20>, 'Connection to 110.7.131.129 timed out. (connect timeout=3)')': /tsfile/live/0131_1.m3u8?key=txiptv&pl
+2025-03-20 12:17:24,998 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000016CA1DCF440>, 'Connection to 110.7.131.129 timed out. (connect timeout=3)')': /tsfile/live/0131_1.m3u8?key=txiptv&pl
+2025-03-20 12:17:29,971 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000016CA1DCF950>, 'Connection to 110.7.131.129 timed out. (connect timeout=3)')': /tsfile/live/0131_1.m3u8?key=txiptv&pl
+2025-03-20 12:17:30,001 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000016CA1DCFC80>, 'Connection to 110.7.131.129 timed out. (connect timeout=3)')': /tsfile/live/0131_1.m3u8?key=txiptv&pl
+2025-03-20 12:20:54,336 - INFO - 启动频道工具 v1.3.2
+2025-03-20 12:21:15,096 - INFO - 开始请求Hacks API: https://iptvs.hacks.tools/api/search?query=5bGx5Lic5Y2r6KeG
+2025-03-20 12:21:17,652 - INFO - 请求成功，获取到 68 条数据
+2025-03-20 12:21:17,653 - INFO - 开始测速检查频道可用性
+2025-03-20 12:21:24,361 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='1.180.2.93', port=9901): Read timed out. (read timeout=3)")': /tsfile/live/0131_1.m3u8
+2025-03-20 12:21:28,428 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='1.180.2.93', port=9901): Read timed out. (read timeout=3)")': /tsfile/live/0131_1.m3u8
+2025-03-20 12:21:33,481 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='1.180.2.93', port=9901): Read timed out. (read timeout=3)")': /tsfile/live/0131_1.m3u8
+2025-03-20 12:23:06,726 - INFO - 启动频道工具 v1.3.2
+2025-03-20 12:23:12,576 - INFO - 开始请求Hacks API: https://iptvs.hacks.tools/api/search?query=5bGx5Lic5Y2r6KeG
+2025-03-20 12:23:13,499 - INFO - 请求成功，获取到 68 条数据
+2025-03-20 12:23:13,501 - INFO - 开始测速检查频道可用性
+2025-03-20 12:23:13,501 - INFO - URL https://stream1.freetv.fun/c5d4b407f5bd662f8e09f05401f6fb313eb498c100530bcd01125ff95bd86201.m3u8
+2025-03-20 12:23:13,503 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-3.m3u8
+2025-03-20 12:23:13,503 - INFO - URL https://stream1.freetv.fun/71a8a5f1faa71f531d0a2bf256fd0de1399bca53bbcec0b0582a05ef3cdebde3.m3u8
+2025-03-20 12:23:13,504 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-47.m3u8
+2025-03-20 12:23:13,506 - INFO - URL https://stream1.freetv.fun/5ce69f5a6cf677a3b0868591ae7b0d53b99c0d50c9674eb9698cada3f3bf81bf.m3u8
+2025-03-20 12:23:13,507 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-6.m3u8
+2025-03-20 12:23:13,508 - INFO - URL https://stream1.freetv.fun/4b9a2ba1fbdf93976890cee68a877827f99571cea805d44aeba818c6bec9c69d.m3u8
+2025-03-20 12:23:13,509 - INFO - URL https://stream1.freetv.fun/4b9a2ba1fbdf93976890cee68a877827f99571cea805d44aeba818c6bec9c69d.m3u8
+2025-03-20 12:23:13,511 - INFO - URL https://stream1.freetv.fun/619f6f15d9c243b386d10c9bedd82da6847bc8d1dd34cb686d9ed36ea5307b03.m3u8
+2025-03-20 12:23:13,514 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-7.m3u8
+2025-03-20 12:23:13,515 - INFO - URL https://stream1.freetv.fun/bdfeedd9cee7f96badac91e6dac2992ed6cdbe112d4cd5fddd82979fc2c9d0a5.m3u8
+2025-03-20 12:23:13,516 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-5.m3u8
+2025-03-20 12:23:13,517 - INFO - URL https://stream1.freetv.fun/196467d6d76f4f4ac05307f14da9677536743a9fc0dfc30d0435ade95f10622d.m3u8
+2025-03-20 12:23:13,517 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-44.m3u8
+2025-03-20 12:23:13,521 - INFO - URL https://stream1.freetv.fun/16beccb46f608524b3d3ae9bcb7410bce0bda616b5e850ccfc14753612f95a25.m3u8
+2025-03-20 12:23:13,521 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-53.m3u8
+2025-03-20 12:23:13,522 - INFO - URL https://stream1.freetv.fun/5bdb53d672473ab1ffc81e5aa19ddfdd0d370c2bc967a8bc2ad506e622bb0928.m3u8
+2025-03-20 12:23:13,524 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-50.m3u8
+2025-03-20 12:23:13,525 - INFO - URL https://stream1.freetv.fun/10c05004b0bd33b2a9b06524305964eca4b4f101210e8ec24152f914f8584229.m3u8
+2025-03-20 12:23:13,526 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-45.m3u8
+2025-03-20 12:23:14,491 - INFO - URL https://stream1.freetv.fun/8627361e487ab4314a40aafbac8d41dc1895c0636b51ac627f694d32aadf90e5.m3u8
+2025-03-20 12:23:14,500 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-48.m3u8
+2025-03-20 12:23:14,504 - INFO - URL https://stream1.freetv.fun/31ef39243b79bb4997d7de4cdd1c6babb9131d53bb0c333f4ccb94c9de178298.m3u8
+2025-03-20 12:23:14,529 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-37.m3u8
+2025-03-20 12:23:14,531 - INFO - URL https://stream1.freetv.fun/7f8eb18a1db9290ee3672412a3a9bd3c6016bc2de82815cf74bd9ddedbc89c0f.m3u8
+2025-03-20 12:23:14,571 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-35.m3u8
+2025-03-20 12:23:14,580 - INFO - URL https://stream1.freetv.fun/3f4392ee150176519af9a365a3e8f636c85883e750679ccf60fbb59b6e208ab1.m3u8
+2025-03-20 12:23:14,650 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-80.m3u8
+2025-03-20 12:23:14,655 - INFO - URL https://stream1.freetv.fun/3405e9bb72355c2bda8dae501cec4dbfb402f4225df810d5643dc58793783542.m3u8
+2025-03-20 12:23:14,694 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-30.m3u8
+2025-03-20 12:23:14,701 - INFO - URL https://stream1.freetv.fun/36638514009ec08528b4761b13a14f0da50b5984fc79e1b2d48398fe0c3562b8.m3u8
+2025-03-20 12:23:14,721 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-10.m3u8
+2025-03-20 12:23:14,737 - INFO - URL https://stream1.freetv.fun/c750ee30a144cca8c6ac7c5c694880e60d46e6dc756084042f67b49c3f51d277.m3u8
+2025-03-20 12:23:14,739 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-70.m3u8
+2025-03-20 12:23:14,750 - INFO - URL https://stream1.freetv.fun/dc02290595664312c49f235a7ddcc445db57176503feb01bbada820d1abda853.m3u8
+2025-03-20 12:23:14,771 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-54.m3u8
+2025-03-20 12:23:14,773 - INFO - URL https://stream1.freetv.fun/c5d7e1d2bdcefe510e4d8ef42acdf78c2e399133bad012c2c8a9125d832da5ee.m3u8
+2025-03-20 12:23:14,779 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-8.m3u8
+2025-03-20 12:23:14,781 - INFO - URL https://stream1.freetv.fun/77c364dc1a58ed62d710b1a31406649e63c3dc8fe28baebf8aa19fc2fc67bc41.m3u8
+2025-03-20 12:23:14,784 - INFO - URL https://stream1.freetv.fun/77c364dc1a58ed62d710b1a31406649e63c3dc8fe28baebf8aa19fc2fc67bc41.m3u8
+2025-03-20 12:23:14,896 - INFO - URL https://stream1.freetv.fun/05089abb0c14bf16465dcb029719afd8bb24a1a2ef9692bf264557a43ddc5cd9.m3u8
+2025-03-20 12:23:14,904 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-41.m3u8
+2025-03-20 12:23:14,914 - INFO - URL https://stream1.freetv.fun/81a4a1600b213a26729f9e24d8381601889787ef3447b8a5dd0566e7e182b285.m3u8
+2025-03-20 12:23:14,942 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-60.m3u8
+2025-03-20 12:23:14,957 - INFO - URL https://stream1.freetv.fun/a601d199d151cb304d3b5bbfd8b0dcd0c0fcbfa73acd23894c79f71ec62fec45.m3u8
+2025-03-20 12:23:14,963 - INFO - URL https://stream1.freetv.fun/ipv6-shan-dong-wei-shi-38.m3u8
+2025-03-20 12:23:14,965 - INFO - URL https://stream1.freetv.fun/55f970d2b6a9d83f2fc0e2a1137a54a5a0b6d8959e55d9c710738d0cbab2b043.m3u8
+2025-03-20 12:23:14,966 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-72.m3u8
+2025-03-20 12:23:14,972 - INFO - URL https://stream1.freetv.fun/acd8f457797b8b2a60bf695905d0e3ad32a654d47a45b9bd4f91545c3f6a9aae.ctv
+2025-03-20 12:23:14,976 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-86.ctv
+2025-03-20 12:23:14,991 - INFO - URL https://stream1.freetv.fun/bd6a37694e1efa04e8be59b8fe452686598c61d790803ad97b04339d271a5f93.m3u8
+2025-03-20 12:23:15,012 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-76.m3u8
+2025-03-20 12:23:15,025 - INFO - URL https://stream1.freetv.fun/3b97ca6daa3a8451a385b7db783b1c5622e979ec500532a2ff7145e99e78fab5.m3u8
+2025-03-20 12:23:15,048 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-49.m3u8
+2025-03-20 12:23:15,090 - INFO - URL https://stream1.freetv.fun/6ae72c2ed9e03972d255c19be7f49c4731d8c51bfd1dfc150e73a2d7a132235d.m3u8
+2025-03-20 12:23:15,097 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000019545D600E0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:23:15,111 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-61.m3u8
+2025-03-20 12:23:15,142 - INFO - URL https://stream1.freetv.fun/d89dc67caadabc802b130e2040f1ded08f8a4cc50a30ec2878de7569bdad21be.m3u8
+2025-03-20 12:23:15,197 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-74.m3u8
+2025-03-20 12:23:15,200 - INFO - URL https://stream1.freetv.fun/db68a456e97be3bf478378d8ec158b7c24f2cadca4e6717665debd43d11bc076.ctv
+2025-03-20 12:23:15,203 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-9.ctv
+2025-03-20 12:23:15,212 - INFO - URL https://stream1.freetv.fun/aafb84247e0f934ae924ed6d837112d3de2c980fbb276812ff55c187a7b26460.m3u8
+2025-03-20 12:23:15,230 - INFO - URL https://stream1.freetv.fun/aafb84247e0f934ae924ed6d837112d3de2c980fbb276812ff55c187a7b26460.m3u8
+2025-03-20 12:23:15,244 - INFO - URL https://stream1.freetv.fun/3e1e0c322f27f07b53308162d0629c956f569c879f3e1863ae85bc894c2e649d.m3u8
+2025-03-20 12:23:15,250 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-14.m3u8
+2025-03-20 12:23:15,274 - INFO - URL https://stream1.freetv.fun/e4e33ebd0a08ad2688e769c32c2a54dd9676bead22ecb11a0a218975b1bf041b.m3u8
+2025-03-20 12:23:15,310 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-59.m3u8
+2025-03-20 12:23:15,336 - INFO - URL https://stream1.freetv.fun/f0cb6082fd6cad9f7b782dbe5c941ba2499ed9c6b0ee4260652bc743b142c502.m3u8
+2025-03-20 12:23:15,359 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-28.m3u8
+2025-03-20 12:23:17,749 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='1.180.2.93', port=9901): Read timed out. (read timeout=3)")': /tsfile/live/0131_1.m3u8
+2025-03-20 12:23:18,496 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='39.164.160.249', port=9901): Read timed out. (read timeout=3)")': /tsfile/live/0131_1.m3u8
+2025-03-20 12:25:13,467 - INFO - 启动频道工具 v1.3.2
+2025-03-20 12:25:18,394 - INFO - 开始提取频道信息
+2025-03-20 12:25:19,193 - INFO - 成功获取动态city参数: aa23d9e7a
+2025-03-20 12:25:21,255 - INFO - 第 1 页请求完毕，获取到 3 条数据，共 2 页
+2025-03-20 12:25:21,257 - INFO - 检测到总页数: 10
+2025-03-20 12:25:22,467 - INFO - 随机模式已启用，将从 10 页中随机抓取以下页面：[5]
+2025-03-20 12:25:23,435 - INFO - 第 5 页请求完毕，获取到 3 条数据
+2025-03-20 12:25:23,436 - INFO - 开始测速检查频道可用性
+2025-03-20 12:25:23,436 - INFO - URL http://l1.weihai.tv:8081/hls/oK0gP1n8et.m3u8
+2025-03-20 12:25:23,439 - INFO - URL http://171.110.42.48:8181/tsfile/live/0131_1.m3u8
+2025-03-20 12:25:23,440 - INFO - URL http://645c6e6320d051d49b446bac57d65143.v.smtcdns.net/4403-tx.otvstream.otvcloud.com/otv/skcc/live/channel29/index.m3u8
+2025-03-20 12:25:23,443 - INFO - URL http://l1.weihai.tv:8081/hls/oK0gP1n8et.m3u8
+2025-03-20 12:25:23,445 - INFO - URL http://171.110.42.48:8181/tsfile/live/0131_1.m3u8
+2025-03-20 12:25:23,445 - INFO - URL http://645c6e6320d051d49b446bac57d65143.v.smtcdns.net/4403-tx.otvstream.otvcloud.com/otv/skcc/live/channel29/index.m3u8
+2025-03-20 12:25:26,494 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000002307EF94A10>, 'Connection to 171.110.42.48 timed out. (connect timeout=3.05)')': /tsfile/live/0131_1.m3u8
+2025-03-20 12:25:26,509 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000002307EF97350>, 'Connection to 171.110.42.48 timed out. (connect timeout=3.05)')': /tsfile/live/0131_1.m3u8
+2025-03-20 12:25:29,569 - INFO - 测速完成，共 0/6 个频道可用
+2025-03-20 12:25:43,256 - INFO - 开始提取频道信息
+2025-03-20 12:25:45,492 - INFO - 检测到总页数: 20
+2025-03-20 12:25:45,493 - INFO - 第 1 页请求完毕，获取到 20 条数据，共 20 页
+2025-03-20 12:25:45,493 - INFO - 随机模式已启用，将从 20 页中随机抓取以下页面：[9]
+2025-03-20 12:25:46,598 - INFO - 第 9 页请求完毕，获取到 20 条数据
+2025-03-20 12:25:47,275 - INFO - 开始测速检查频道可用性
+2025-03-20 12:25:47,277 - INFO - URL http://27.16.132.100:8686/rtp/239.69.1.69:10054
+2025-03-20 12:25:47,280 - INFO - URL http://125.119.117.124:4022/udp/233.50.201.64:5140
+2025-03-20 12:25:47,280 - INFO - URL http://60.223.72.24:8001/rtp/226.0.2.51:8320
+2025-03-20 12:25:47,284 - INFO - URL http://123.147.92.64:8003/udp/225.0.4.199:7980
+2025-03-20 12:25:47,285 - INFO - URL http://119.36.78.50:9981/tsfile/live/0131_1.m3u8
+2025-03-20 12:25:47,285 - INFO - URL http://121.232.178.68:60001/tsfile/live/0131_1.m3u8
+2025-03-20 12:25:47,288 - INFO - URL http://42.225.144.246:8089/hls/36/index.m3u8
+2025-03-20 12:25:47,291 - INFO - URL http://220.164.192.48:50085/tsfile/live/0121_1.m3u8
+2025-03-20 12:25:47,292 - INFO - URL http://36.32.174.67:60080/newlive/live/hls/42/live.m3u8
+2025-03-20 12:25:47,293 - INFO - URL http://58.58.111.222:808/hls/57/index.m3u8
+2025-03-20 12:25:47,295 - INFO - URL http://[2409:8087:1:20:20::2a]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226244/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EycMz-PML_dQW8iLcNBkw7g%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNMYCYLC04QAM6EBli1wTuET%2CEND
+2025-03-20 12:25:47,297 - INFO - URL http://106.46.36.33:808/hls/67/index.m3u8
+2025-03-20 12:25:47,301 - INFO - URL http://z.b.bkpcp.top/m.php?id=sdws
+2025-03-20 12:25:47,301 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023002EF64E0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88888888/224/3221226244/1.m3u8?GuardEncType=2&accountinfo=~~V2.0~ycMz-PML_dQW8iLcNBkw7g~_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNMYCYLC04QAM6EBli1wTuET%2CEND
+2025-03-20 12:25:47,303 - INFO - URL http://171.124.178.52:8899/tsfile/live/0131_1.m3u8
+2025-03-20 12:25:47,304 - INFO - URL http://113.65.162.235:8081/hls/51/index.m3u8
+2025-03-20 12:25:47,306 - INFO - URL http://183.186.91.42:8899/tsfile/live/0131_1.m3u8
+2025-03-20 12:25:47,308 - INFO - URL http://119.140.58.23:2024/hls/72/index.m3u8
+2025-03-20 12:25:47,310 - INFO - URL http://42.225.147.15:8089/hls/36/index.m3u8
+2025-03-20 12:25:47,311 - INFO - URL http://home.wwang.pw:35455/itv/1000000005000265019.m3u8?cdn=ystenlive
+2025-03-20 12:25:47,312 - INFO - URL http://39.164.160.249:9901/tsfile/live/0131_1.m3u8
+2025-03-20 12:25:47,322 - INFO - URL http://118.122.189.74:9901/tsfile/live/0131_1.m3u8
+2025-03-20 12:25:47,335 - INFO - URL http://123.10.77.113:808/hls/39/index.m3u8
+2025-03-20 12:25:47,336 - INFO - URL http://60.220.147.32:808/hls/39/index.m3u8
+2025-03-20 12:25:47,353 - INFO - URL http://221.14.157.252:4001/rtp/225.1.4.27:1056
+2025-03-20 12:25:47,356 - INFO - URL http://60.223.72.7:8004/rtp/226.0.2.51:8320
+2025-03-20 12:25:47,368 - INFO - URL http://111.29.9.33:6610/000000001000/1000000001000012807/index.m3u8?channel-id=bestzb&Contentid=1000000001000012807&livemode=1&stbId=3
+2025-03-20 12:25:47,372 - INFO - URL http://183.66.15.138:4070/rtp/235.254.198.24:1372
+2025-03-20 12:25:47,374 - INFO - URL http://27.10.227.74:8004/udp/225.0.4.199:7980
+2025-03-20 12:25:47,377 - INFO - URL http://27.10.215.86:8007/udp/225.0.4.199:7980
+2025-03-20 12:25:47,400 - INFO - URL http://123.10.67.251:4022/rtp/225.1.4.27:1056
+2025-03-20 12:25:47,400 - INFO - URL http://116.117.107.20:8096/tsfile/live/0131_1.m3u8
+2025-03-20 12:25:47,503 - INFO - URL http://27.152.51.219:1025/rtp/239.61.2.119:8708
+2025-03-20 12:25:47,507 - INFO - URL http://111.224.100.58:4022/rtp/239.254.200.55:8052
+2025-03-20 12:25:47,623 - INFO - URL http://122.242.95.227:58888/udp/233.50.201.64:5140
+2025-03-20 12:25:48,762 - INFO - URL http://110.7.131.129:8096/tsfile/live/0131_1.m3u8
+2025-03-20 12:25:49,481 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002307EF94560>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /itv/1000000005000265019.m3u8?cdn=ystenlive
+2025-03-20 12:25:49,529 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002307EF73EC0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /hls/72/index.m3u8
+2025-03-20 12:25:49,655 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023002ED46E0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /rtp/235.254.198.24:1372
+2025-03-20 12:25:50,356 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000023002ED7470>, 'Connection to 42.225.144.246 timed out. (connect timeout=3.05)')': /hls/36/index.m3u8
+2025-03-20 12:25:50,371 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000023002F207D0>, 'Connection to 171.124.178.52 timed out. (connect timeout=3.05)')': /tsfile/live/0131_1.m3u8
+2025-03-20 12:25:50,373 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000002307EF955B0>, 'Connection to 42.225.147.15 timed out. (connect timeout=3.05)')': /hls/36/index.m3u8
+2025-03-20 12:25:50,401 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000023002EB7FB0>, 'Connection to 60.220.147.32 timed out. (connect timeout=3.05)')': /hls/39/index.m3u8
+2025-03-20 12:25:50,402 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000023002F457F0>, 'Connection to 123.10.77.113 timed out. (connect timeout=3.05)')': /hls/39/index.m3u8
+2025-03-20 12:25:50,416 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000023002F45DF0>, 'Connection to 221.14.157.252 timed out. (connect timeout=3.05)')': /rtp/225.1.4.27:1056
+2025-03-20 12:25:50,416 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000023002ED60C0>, 'Connection to 60.223.72.7 timed out. (connect timeout=3.05)')': /rtp/226.0.2.51:8320
+2025-03-20 12:25:50,432 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000023002EB70B0>, 'Connection to 27.10.227.74 timed out. (connect timeout=3.05)')': /udp/225.0.4.199:7980
+2025-03-20 12:25:50,432 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000002307ED9B2F0>, 'Connection to 27.10.215.86 timed out. (connect timeout=3.05)')': /udp/225.0.4.199:7980
+2025-03-20 12:25:50,432 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000023002ED6840>, 'Connection to 111.29.9.33 timed out. (connect timeout=3.05)')': /000000001000/1000000001000012807/index.m3u8?channel-id=bestzb&Contentid=1000000001000012807&livemode=1&stbId=3
+2025-03-20 12:25:50,463 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000023002ED4C20>, 'Connection to 123.10.67.251 timed out. (connect timeout=3.05)')': /rtp/225.1.4.27:1056
+2025-03-20 12:25:50,463 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000023002F45910>, 'Connection to 116.117.107.20 timed out. (connect timeout=3.05)')': /tsfile/live/0131_1.m3u8
+2025-03-20 12:25:50,556 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000023002EF69C0>, 'Connection to 27.152.51.219 timed out. (connect timeout=3.05)')': /rtp/239.61.2.119:8708
+2025-03-20 12:25:50,571 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000023002EF5610>, 'Connection to 111.224.100.58 timed out. (connect timeout=3.05)')': /rtp/239.254.200.55:8052
+2025-03-20 12:25:50,679 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000023002ED7B00>, 'Connection to 122.242.95.227 timed out. (connect timeout=3.05)')': /udp/233.50.201.64:5140
+2025-03-20 12:25:51,679 - INFO - URL http://222.219.183.103:8089/hls/34/index.m3u8
+2025-03-20 12:25:51,725 - INFO - URL http://113.118.15.210:808/hls/43/index.m3u8
+2025-03-20 12:25:51,818 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000023002F20230>, 'Connection to 110.7.131.129 timed out. (connect timeout=3.05)')': /tsfile/live/0131_1.m3u8
+2025-03-20 12:25:51,865 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='39.164.160.249', port=9901): Read timed out. (read timeout=4.5)")': /tsfile/live/0131_1.m3u8
+2025-03-20 12:25:51,872 - INFO - URL http://z.b.bkpcp.top/m.php?=sdws
+2025-03-20 12:25:52,280 - INFO - URL http://60.220.167.249:8085/rtp/226.0.2.51:8320
+2025-03-20 12:25:52,299 - INFO - URL http://123.145.50.156:8001/udp/225.0.4.199:7980
+2025-03-20 12:25:54,781 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000230030BD550>, 'Connection to 113.118.15.210 timed out. (connect timeout=3.05)')': /hls/43/index.m3u8
+2025-03-20 12:25:55,344 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000230030BE390>, 'Connection to 60.220.167.249 timed out. (connect timeout=3.05)')': /rtp/226.0.2.51:8320
+2025-03-20 12:25:55,360 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000230030BDC40>, 'Connection to 123.145.50.156 timed out. (connect timeout=3.05)')': /udp/225.0.4.199:7980
+2025-03-20 12:25:58,421 - INFO - 测速完成，共 14/40 个频道可用
+2025-03-20 12:26:45,272 - INFO - 启动频道工具 v1.3.2
+2025-03-20 12:26:50,891 - INFO - 开始请求Hacks API: https://iptvs.hacks.tools/api/search?query=5bGx5Lic5Y2r6KeG
+2025-03-20 12:26:52,032 - INFO - 请求成功，获取到 68 条数据
+2025-03-20 12:26:52,032 - INFO - 开始测速检查频道可用性
+2025-03-20 12:26:52,033 - INFO - URL https://stream1.freetv.fun/c5d4b407f5bd662f8e09f05401f6fb313eb498c100530bcd01125ff95bd86201.m3u8
+2025-03-20 12:26:52,036 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-3.m3u8
+2025-03-20 12:26:52,037 - INFO - URL https://stream1.freetv.fun/71a8a5f1faa71f531d0a2bf256fd0de1399bca53bbcec0b0582a05ef3cdebde3.m3u8
+2025-03-20 12:26:52,038 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-47.m3u8
+2025-03-20 12:26:52,038 - INFO - URL https://stream1.freetv.fun/5ce69f5a6cf677a3b0868591ae7b0d53b99c0d50c9674eb9698cada3f3bf81bf.m3u8
+2025-03-20 12:26:52,039 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-6.m3u8
+2025-03-20 12:26:52,042 - INFO - URL https://stream1.freetv.fun/4b9a2ba1fbdf93976890cee68a877827f99571cea805d44aeba818c6bec9c69d.m3u8
+2025-03-20 12:26:52,043 - INFO - URL https://stream1.freetv.fun/4b9a2ba1fbdf93976890cee68a877827f99571cea805d44aeba818c6bec9c69d.m3u8
+2025-03-20 12:26:52,044 - INFO - URL https://stream1.freetv.fun/619f6f15d9c243b386d10c9bedd82da6847bc8d1dd34cb686d9ed36ea5307b03.m3u8
+2025-03-20 12:26:52,046 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-7.m3u8
+2025-03-20 12:26:52,048 - INFO - URL https://stream1.freetv.fun/bdfeedd9cee7f96badac91e6dac2992ed6cdbe112d4cd5fddd82979fc2c9d0a5.m3u8
+2025-03-20 12:26:52,048 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-5.m3u8
+2025-03-20 12:26:52,050 - INFO - URL https://stream1.freetv.fun/196467d6d76f4f4ac05307f14da9677536743a9fc0dfc30d0435ade95f10622d.m3u8
+2025-03-20 12:26:52,051 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-44.m3u8
+2025-03-20 12:26:52,052 - INFO - URL https://stream1.freetv.fun/16beccb46f608524b3d3ae9bcb7410bce0bda616b5e850ccfc14753612f95a25.m3u8
+2025-03-20 12:26:52,055 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-53.m3u8
+2025-03-20 12:26:52,056 - INFO - URL https://stream1.freetv.fun/5bdb53d672473ab1ffc81e5aa19ddfdd0d370c2bc967a8bc2ad506e622bb0928.m3u8
+2025-03-20 12:26:52,057 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-50.m3u8
+2025-03-20 12:26:52,059 - INFO - URL https://stream1.freetv.fun/10c05004b0bd33b2a9b06524305964eca4b4f101210e8ec24152f914f8584229.m3u8
+2025-03-20 12:26:52,061 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-45.m3u8
+2025-03-20 12:26:52,938 - INFO - URL https://stream1.freetv.fun/8627361e487ab4314a40aafbac8d41dc1895c0636b51ac627f694d32aadf90e5.m3u8
+2025-03-20 12:26:53,034 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-48.m3u8
+2025-03-20 12:26:53,078 - INFO - URL https://stream1.freetv.fun/31ef39243b79bb4997d7de4cdd1c6babb9131d53bb0c333f4ccb94c9de178298.m3u8
+2025-03-20 12:26:53,101 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-37.m3u8
+2025-03-20 12:26:53,137 - INFO - URL https://stream1.freetv.fun/7f8eb18a1db9290ee3672412a3a9bd3c6016bc2de82815cf74bd9ddedbc89c0f.m3u8
+2025-03-20 12:26:53,142 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-35.m3u8
+2025-03-20 12:26:53,172 - INFO - URL https://stream1.freetv.fun/3f4392ee150176519af9a365a3e8f636c85883e750679ccf60fbb59b6e208ab1.m3u8
+2025-03-20 12:26:53,245 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-80.m3u8
+2025-03-20 12:26:53,262 - INFO - URL https://stream1.freetv.fun/3405e9bb72355c2bda8dae501cec4dbfb402f4225df810d5643dc58793783542.m3u8
+2025-03-20 12:26:53,264 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-30.m3u8
+2025-03-20 12:26:53,267 - INFO - URL https://stream1.freetv.fun/36638514009ec08528b4761b13a14f0da50b5984fc79e1b2d48398fe0c3562b8.m3u8
+2025-03-20 12:26:53,271 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-10.m3u8
+2025-03-20 12:26:53,274 - INFO - URL https://stream1.freetv.fun/c750ee30a144cca8c6ac7c5c694880e60d46e6dc756084042f67b49c3f51d277.m3u8
+2025-03-20 12:26:53,285 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-70.m3u8
+2025-03-20 12:26:53,289 - INFO - URL https://stream1.freetv.fun/dc02290595664312c49f235a7ddcc445db57176503feb01bbada820d1abda853.m3u8
+2025-03-20 12:26:53,295 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-54.m3u8
+2025-03-20 12:26:53,325 - INFO - URL https://stream1.freetv.fun/c5d7e1d2bdcefe510e4d8ef42acdf78c2e399133bad012c2c8a9125d832da5ee.m3u8
+2025-03-20 12:26:53,346 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-8.m3u8
+2025-03-20 12:26:53,350 - INFO - URL https://stream1.freetv.fun/77c364dc1a58ed62d710b1a31406649e63c3dc8fe28baebf8aa19fc2fc67bc41.m3u8
+2025-03-20 12:26:53,351 - INFO - URL https://stream1.freetv.fun/77c364dc1a58ed62d710b1a31406649e63c3dc8fe28baebf8aa19fc2fc67bc41.m3u8
+2025-03-20 12:26:53,358 - INFO - URL https://stream1.freetv.fun/05089abb0c14bf16465dcb029719afd8bb24a1a2ef9692bf264557a43ddc5cd9.m3u8
+2025-03-20 12:26:53,456 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-41.m3u8
+2025-03-20 12:26:53,460 - INFO - URL https://stream1.freetv.fun/81a4a1600b213a26729f9e24d8381601889787ef3447b8a5dd0566e7e182b285.m3u8
+2025-03-20 12:26:53,504 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-60.m3u8
+2025-03-20 12:26:53,517 - INFO - URL https://stream1.freetv.fun/a601d199d151cb304d3b5bbfd8b0dcd0c0fcbfa73acd23894c79f71ec62fec45.m3u8
+2025-03-20 12:26:53,534 - INFO - URL https://stream1.freetv.fun/ipv6-shan-dong-wei-shi-38.m3u8
+2025-03-20 12:26:53,537 - INFO - URL https://stream1.freetv.fun/55f970d2b6a9d83f2fc0e2a1137a54a5a0b6d8959e55d9c710738d0cbab2b043.m3u8
+2025-03-20 12:26:53,553 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-72.m3u8
+2025-03-20 12:26:53,569 - INFO - URL https://stream1.freetv.fun/acd8f457797b8b2a60bf695905d0e3ad32a654d47a45b9bd4f91545c3f6a9aae.ctv
+2025-03-20 12:26:53,583 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E4C76F8F50>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:26:53,600 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E4C76FA4B0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:26:53,601 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-86.ctv
+2025-03-20 12:26:53,609 - INFO - URL https://stream1.freetv.fun/bd6a37694e1efa04e8be59b8fe452686598c61d790803ad97b04339d271a5f93.m3u8
+2025-03-20 12:26:53,612 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-76.m3u8
+2025-03-20 12:26:53,646 - INFO - URL https://stream1.freetv.fun/3b97ca6daa3a8451a385b7db783b1c5622e979ec500532a2ff7145e99e78fab5.m3u8
+2025-03-20 12:26:53,647 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-49.m3u8
+2025-03-20 12:26:53,673 - INFO - URL https://stream1.freetv.fun/6ae72c2ed9e03972d255c19be7f49c4731d8c51bfd1dfc150e73a2d7a132235d.m3u8
+2025-03-20 12:26:53,686 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-61.m3u8
+2025-03-20 12:26:53,737 - INFO - URL https://stream1.freetv.fun/d89dc67caadabc802b130e2040f1ded08f8a4cc50a30ec2878de7569bdad21be.m3u8
+2025-03-20 12:26:53,759 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-74.m3u8
+2025-03-20 12:26:53,784 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E4C773C2C0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88
+2025-03-20 12:26:53,784 - INFO - URL https://stream1.freetv.fun/db68a456e97be3bf478378d8ec158b7c24f2cadca4e6717665debd43d11bc076.ctv
+2025-03-20 12:26:53,787 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-9.ctv
+2025-03-20 12:26:53,790 - INFO - URL https://stream1.freetv.fun/aafb84247e0f934ae924ed6d837112d3de2c980fbb276812ff55c187a7b26460.m3u8
+2025-03-20 12:26:53,800 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E4C773CD40>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88
+2025-03-20 12:26:53,801 - INFO - URL https://stream1.freetv.fun/aafb84247e0f934ae924ed6d837112d3de2c980fbb276812ff55c187a7b26460.m3u8
+2025-03-20 12:26:53,825 - INFO - URL https://stream1.freetv.fun/3e1e0c322f27f07b53308162d0629c956f569c879f3e1863ae85bc894c2e649d.m3u8
+2025-03-20 12:26:53,849 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-14.m3u8
+2025-03-20 12:26:53,851 - INFO - URL https://stream1.freetv.fun/e4e33ebd0a08ad2688e769c32c2a54dd9676bead22ecb11a0a218975b1bf041b.m3u8
+2025-03-20 12:26:53,878 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-59.m3u8
+2025-03-20 12:26:53,886 - INFO - URL https://stream1.freetv.fun/f0cb6082fd6cad9f7b782dbe5c941ba2499ed9c6b0ee4260652bc743b142c502.m3u8
+2025-03-20 12:26:53,909 - INFO - URL https://stream1.freetv.fun/shan-dong-wei-shi-28.m3u8
+2025-03-20 12:26:54,053 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E4C773FF50>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/y
+2025-03-20 12:27:02,067 - ERROR - 测速总体执行超时
+2025-03-20 12:30:12,146 - INFO - 启动频道工具 v1.3.2
+2025-03-20 12:30:25,785 - INFO - 开始请求Hacks API: https://iptvs.hacks.tools/api/search?query=5bGx5Lic5Y2r6KeG
+2025-03-20 12:30:26,707 - INFO - 请求成功，获取到 68 条数据
+2025-03-20 12:30:26,707 - INFO - 开始测速检查频道可用性
+2025-03-20 12:30:27,880 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000223853CE480>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:30:28,005 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000223853CD340>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:30:28,268 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000223853CFEF0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /ottrrs.hl.chinamobile.com/P
+2025-03-20 12:30:30,696 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='1.180.2.93', port=9901): Read timed out. (read timeout=3)")': /tsfile/live/0131_1.m3u8
+2025-03-20 12:30:36,737 - ERROR - 测速总体执行超时
+2025-03-20 12:30:36,737 - INFO - 测速完成，共 66/68 个频道可用
+2025-03-20 12:30:51,925 - INFO - 已复制URL：https://stream1.freetv.fun/shan-dong-wei-shi-47.m3u8
+2025-03-20 12:31:14,628 - INFO - 已复制URL：http://[2409:8087:1a01:df::4077]:80/ottrrs.hl.chinamobile.com/P
+2025-03-20 12:31:23,640 - INFO - 已复制URL：https://stream1.freetv.fun/shan-dong-wei-shi-53.m3u8
+2025-03-20 14:29:32,070 - INFO - 启动频道工具 v1.3.2
+2025-03-20 14:29:42,017 - INFO - 开始请求Hacks API: https://iptvs.hacks.tools/api/search?query=5YyX5Lqs5Y2r6KeG
+2025-03-20 14:29:44,712 - INFO - 请求成功，获取到 58 条数据
+2025-03-20 14:29:44,712 - INFO - 开始测速检查频道可用性
+2025-03-20 14:29:46,458 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E5C786E5A0>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88888888/224/3221226900/1.m3u8?GuardEncType=2&accountinfo=~~V2.0~cYPi33WFyhvd6SjmqUKhJg~tP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
+2025-03-20 14:29:47,810 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E5C7886810>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88888888/224/3221226436/1.m3u8?GuardEncType=2&accountinfo=~~V2.0~lMQ3ov45VmhzipweN5VstQ~_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNPg_yZ8DZHTaSU92MIl_o3b%2CEND
+2025-03-20 14:29:49,987 - INFO - HTTP重定向: https://stream1.freetv.fun/bei-jing-wei-shi-gao-qing-6.ctv -> http://119.32.12.32:2901/udp/224.1.100.100:11111
+2025-03-20 14:29:49,987 - INFO - HTTP重定向: https://stream1.freetv.fun/a79bb76f95e8bb261aa033c2f941408e0dd7d5d3b1e8148c36cb84bbb5554b25.ctv -> http://119.32.12.32:2901/udp/224.1.100.100:11111
+2025-03-20 14:29:50,445 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='39.164.160.249', port=9901): Read timed out. (read timeout=3)")': /tsfile/live/0122_1.m3u8
+2025-03-20 14:29:53,477 - INFO - 测速完成，共 58/58 个频道可用
+2025-03-20 14:39:19,588 - INFO - 启动频道工具 v1.3.2
+2025-03-20 14:39:24,492 - INFO - 开始请求Hacks API: https://iptvs.hacks.tools/api/search?query=5bGx5Lic5Y2r6KeG
+2025-03-20 14:39:26,285 - INFO - 请求成功，获取到 68 条数据
+2025-03-20 14:39:26,287 - INFO - 开始测速检查频道可用性
+2025-03-20 14:39:27,592 - INFO - 更新URL: https://stream1.freetv.fun/shan-dong-wei-shi-45.m3u8 -> http://183.3.134.56:9901/tsfile/live/0131_1.m3u8?key=tvbox6_com
+2025-03-20 14:39:27,631 - INFO - 更新URL: https://stream1.freetv.fun/5bdb53d672473ab1ffc81e5aa19ddfdd0d370c2bc967a8bc2ad506e622bb0928.m3u8 -> http://110.53.52.63:8888/newlive/live/hls/29/live.m3u8
+2025-03-20 14:39:27,898 - INFO - 更新URL: https://stream1.freetv.fun/shan-dong-wei-shi-50.m3u8 -> http://110.53.52.63:8888/newlive/live/hls/29/live.m3u8
+2025-03-20 14:39:28,155 - INFO - 更新URL: https://stream1.freetv.fun/shan-dong-wei-shi-35.m3u8 -> http://110.7.131.40:9901/tsfile/live/0131_1.m3u8?key=txiptv&pla
+2025-03-20 14:39:28,181 - INFO - 更新URL: https://stream1.freetv.fun/shan-dong-wei-shi-37.m3u8 -> http://110.7.131.193:9901/tsfile/live/0131_1.m3u8?key=txiptv&pl
+2025-03-20 14:39:28,204 - INFO - 更新URL: https://stream1.freetv.fun/shan-dong-wei-shi-80.m3u8 -> http://36.32.174.67:60080/newlive/live/hls/42/live.m3u8
+2025-03-20 14:39:28,217 - INFO - 更新URL: https://stream1.freetv.fun/3405e9bb72355c2bda8dae501cec4dbfb402f4225df810d5643dc58793783542.m3u8 -> http://61.156.228.12:8154/tsfile/live/0131_1.m3u8
+2025-03-20 14:39:28,226 - INFO - 更新URL: https://stream1.freetv.fun/shan-dong-wei-shi-30.m3u8 -> http://61.156.228.12:8154/tsfile/live/0131_1.m3u8
+2025-03-20 14:39:28,236 - INFO - 更新URL: https://stream1.freetv.fun/36638514009ec08528b4761b13a14f0da50b5984fc79e1b2d48398fe0c3562b8.m3u8 -> http://124.128.73.58:9901/tsfile/live/0107_1.m3u8
+2025-03-20 14:39:28,463 - INFO - 更新URL: https://stream1.freetv.fun/shan-dong-wei-shi-41.m3u8 -> http://111.61.236.247:9081/hls/31/index.m3u8
+2025-03-20 14:39:28,887 - INFO - 更新URL: https://stream1.freetv.fun/6ae72c2ed9e03972d255c19be7f49c4731d8c51bfd1dfc150e73a2d7a132235d.m3u8 -> http://220.164.192.48:50085/tsfile/live/0121_1.m3u8
+2025-03-20 14:39:28,962 - INFO - 更新URL: https://stream1.freetv.fun/shan-dong-wei-shi-74.m3u8 -> http://39.164.160.249:9901/tsfile/live/0131_1.m3u8
+2025-03-20 14:39:32,034 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='39.164.160.249', port=9901): Read timed out. (read timeout=3)")': /tsfile/live/0131_1.m3u8
+2025-03-20 14:39:35,103 - INFO - 测试真实URL失败: http://39.164.160.249:9901/tsfile/live/0131_1.m3u8, 错误: HTTPConnectionPool(host='39.164.160.249', port=9901): Max retries exceeded with url: /tsfile/live/0131_1.m3u8 (Caused by ReadTimeoutError("HTTPConnectionPool(host='39.164.160.249', port=9901): Read timed out. (read timeout=3)"))
+2025-03-20 14:39:36,316 - ERROR - 测速总体执行超时
+2025-03-20 14:39:36,316 - INFO - 测速完成，共 66/68 个频道可用
+2025-03-20 14:47:16,187 - INFO - 启动频道工具 v1.3.2
+2025-03-20 14:47:21,096 - INFO - 开始请求Hacks API: https://iptvs.hacks.tools/api/search?query=5bGx5Lic5Y2r6KeG
+2025-03-20 14:47:23,036 - INFO - 请求成功，获取到 68 条数据
+2025-03-20 14:47:23,036 - INFO - 开始测速检查频道可用性
+2025-03-20 14:47:24,207 - INFO - 更新URL: https://stream1.freetv.fun/shan-dong-wei-shi-53.m3u8 -> http://222.169.85.8:9901/tsfile/live/0131_1.m3u8?key=txiptv&pla
+2025-03-20 14:47:24,238 - INFO - 更新URL: https://stream1.freetv.fun/c5d4b407f5bd662f8e09f05401f6fb313eb498c100530bcd01125ff95bd86201.m3u8 -> http://58.210.168.86:10800/newlive/live/hls/24/live.m3u8
+2025-03-20 14:47:24,435 - INFO - 更新URL: https://stream1.freetv.fun/5bdb53d672473ab1ffc81e5aa19ddfdd0d370c2bc967a8bc2ad506e622bb0928.m3u8 -> http://110.53.52.63:8888/newlive/live/hls/29/live.m3u8
+2025-03-20 14:47:24,462 - INFO - 更新URL: https://stream1.freetv.fun/5ce69f5a6cf677a3b0868591ae7b0d53b99c0d50c9674eb9698cada3f3bf81bf.m3u8 -> http://183.11.239.36:808/hls/43/index.m3u8
+2025-03-20 14:47:24,519 - INFO - 更新URL: https://stream1.freetv.fun/shan-dong-wei-shi-48.m3u8 -> http://222.219.183.103:8089/hls/34/index.m3u8
+2025-03-20 14:47:24,521 - INFO - 更新URL: https://stream1.freetv.fun/bdfeedd9cee7f96badac91e6dac2992ed6cdbe112d4cd5fddd82979fc2c9d0a5.m3u8 -> http://60.223.224.176:8888/newlive/live/hls/29/live.m3u8
+2025-03-20 14:47:24,649 - INFO - 更新URL: https://stream1.freetv.fun/3405e9bb72355c2bda8dae501cec4dbfb402f4225df810d5643dc58793783542.m3u8 -> http://61.156.228.12:8154/tsfile/live/0131_1.m3u8
+2025-03-20 14:47:24,653 - INFO - 更新URL: https://stream1.freetv.fun/shan-dong-wei-shi-30.m3u8 -> http://61.156.228.12:8154/tsfile/live/0131_1.m3u8
+2025-03-20 14:47:24,789 - INFO - 更新URL: https://stream1.freetv.fun/c5d7e1d2bdcefe510e4d8ef42acdf78c2e399133bad012c2c8a9125d832da5ee.m3u8 -> http://dassby.qqff.top:99/live/山东卫视高清/index.m3u8
+2025-03-20 14:47:24,793 - INFO - 更新URL: https://stream1.freetv.fun/77c364dc1a58ed62d710b1a31406649e63c3dc8fe28baebf8aa19fc2fc67bc41.m3u8 -> http://[2409:8087:1a01:df::4077]:80/ottrrs.hl.chinamobile.com/P
+2025-03-20 14:47:24,799 - INFO - 测试真实URL失败: http://[2409:8087:1a01:df::4077]:80/ottrrs.hl.chinamobile.com/P
+2025-03-20 14:47:24,883 - INFO - 更新URL: https://stream1.freetv.fun/shan-dong-wei-shi-60.m3u8 -> http://124.128.73.58:9901/tsfile/live/0107_1.m3u8?key=txiptv&pl
+2025-03-20 14:47:24,934 - INFO - 更新URL: https://stream1.freetv.fun/shan-dong-wei-shi-72.m3u8 -> http://110.7.131.129:8096/tsfile/live/0131_1.m3u8?key=txiptv&pl
+2025-03-20 14:47:25,129 - INFO - 更新URL: https://stream1.freetv.fun/aafb84247e0f934ae924ed6d837112d3de2c980fbb276812ff55c187a7b26460.m3u8 -> http://[2409:8087:1a01:df::4077]:80/ottrrs.hl.chinamobile.com/y
+2025-03-20 14:47:25,132 - INFO - 测试真实URL失败: http://[2409:8087:1a01:df::4077]:80/ottrrs.hl.chinamobile.com/y
+2025-03-20 14:47:30,960 - INFO - 测试真实URL失败: http://110.7.131.129:8096/tsfile/live/0131_1.m3u8?key=txiptv&pl
+2025-03-20 14:47:33,082 - ERROR - 测速总体执行超时
+2025-03-20 14:47:33,082 - INFO - 测速完成，共 66/68 个频道可用
+2025-03-20 14:48:19,553 - INFO - 启动频道工具 v1.3.2
+2025-03-20 14:48:25,091 - INFO - 开始请求Hacks API: https://iptvs.hacks.tools/api/search?query=5YyX5Lqs5Y2r6KeG
+2025-03-20 14:48:26,217 - INFO - 请求成功，获取到 58 条数据
+2025-03-20 14:48:26,217 - INFO - 开始测速检查频道可用性
+2025-03-20 14:48:28,174 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D0C48A6F30>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。')': /otttv.bj.chinamobile.com/PLTV/88
+2025-03-20 14:48:28,961 - INFO - 测速完成，共 58/58 个频道可用
+2025-03-20 14:51:09,550 - INFO - 启动频道工具 v1.3.2
+2025-03-20 14:51:17,313 - INFO - 开始请求Hacks API: https://iptvs.hacks.tools/api/search?query=Q0NUVjY%3D
+2025-03-20 14:51:18,632 - INFO - 请求成功，获取到 78 条数据
+2025-03-20 14:51:18,634 - INFO - 开始测速检查频道可用性
+2025-03-20 14:51:24,308 - INFO - 测速完成，共 76/78 个频道可用
+2025-03-20 14:51:37,594 - INFO - 已复制URL：https://stream1.freetv.fun/cctv6-57.m3u8
+2025-03-20 14:51:58,088 - INFO - 已复制URL：https://stream1.freetv.fun/cctv6-72.m3u8

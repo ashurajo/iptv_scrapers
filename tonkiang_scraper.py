@@ -23,7 +23,7 @@ class TonkiangScraper(BaseIPTVScraper):
         }
         try:
             response = self.session.get(
-                f"{self.base_url}/ag.php?s=ai&c=ch",
+                f"{self.base_url}/ga.php?s=ai&c=ch",
                 headers=ac_headers,
                 proxies=self.proxies if self.proxy_enabled else None,
             )
