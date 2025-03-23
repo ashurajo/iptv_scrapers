@@ -42,6 +42,22 @@ class IPTVScraperGUI:
             'Connection': 'keep-alive',
         }
         
+        self.notebook = ttk.Notebook(self.root)
+        self.notebook.pack(fill='both', expand=True, padx=5, pady=5)
+        
+        self.main_tab = ttk.Frame(self.notebook)
+        self.notebook.add(self.main_tab, text="频道库抓取")
+
+        self.blank_tab = ttk.Frame(self.notebook)
+        self.notebook.add(self.blank_tab, text="自定义抓取")
+
+        self.about_tab = ttk.Frame(self.notebook)
+        self.notebook.add(self.about_tab, text="关于")
+
+        ttk.Label(self.blank_tab, text="本功能正在开发，旨在实现自定义多个URL库，然后根据搜索词检测其中可用的源。", font=("黑体", 12)).pack(expand=True, pady=50)
+
+        self.create_about_page()
+        
         self.create_widgets()
         self.setup_logging()
         self.create_proxy_controls()
@@ -49,6 +65,91 @@ class IPTVScraperGUI:
         self.create_progress_label()
 
         self.root.bind('<<ScrapingDone>>', self.on_scraping_done)
+        
+    def create_about_page(self):
+        """创建关于页面"""
+        about_frame = ttk.Frame(self.about_tab, padding=20)
+        about_frame.pack(fill='both', expand=True)
+        
+        # 标题
+        title_label = ttk.Label(about_frame, text="IPTV频道抓取工具", font=("黑体", 16, "bold"))
+        title_label.pack(pady=(0, 10))
+        
+        # 版本信息
+        version_label = ttk.Label(about_frame, text=f"版本: {self.version}", font=("黑体", 10))
+        version_label.pack(pady=2)
+        
+        # 作者信息
+        author_label = ttk.Label(about_frame, text="作者: Skye", font=("黑体", 10))
+        author_label.pack(pady=2)
+        
+        # 编译日期
+        build_label = ttk.Label(about_frame, text="编译日期: 2025-03-24", font=("黑体", 10))
+        build_label.pack(pady=2)
+        
+        # 更新内容
+        updates_frame = ttk.LabelFrame(about_frame, text="最近更新", padding=10)
+        updates_frame.pack(fill='x', pady=10)
+        
+        updates = [
+            "- 新增了IPTV365抓取方式",
+            "- 修复了hacks检测源异常的问题",
+            "- 修复了性能问题",
+            "- 优化了界面"
+        ]
+        
+        for update in updates:
+            ttk.Label(updates_frame, text=update, font=("黑体", 9)).pack(anchor='w', pady=1)
+        
+        
+        # 免费软件声明
+        disclaimer_frame = ttk.LabelFrame(about_frame, text="免费软件声明", padding=10)
+        disclaimer_frame.pack(fill='x', pady=10)
+        
+        disclaimers = [
+            "本软件为免费软件，仅供学习和研究使用。",
+            "使用本软件时请遵守当地法律法规。",
+            "开发者不对使用本软件产生的任何后果负责。",
+            "禁止将本软件用于任何商业用途。"
+        ]
+        
+        for disclaimer in disclaimers:
+            ttk.Label(disclaimer_frame, text=disclaimer, font=("黑体", 9)).pack(anchor='w', pady=1)
+                # 开源信息
+        repo_frame = ttk.Frame(about_frame)
+        repo_frame.pack(fill='x', pady=10)
+        
+        repo_label = ttk.Label(repo_frame, text="开源地址: ", font=("黑体", 10))
+        repo_label.pack(side='left')
+        
+        repo_link = ttk.Label(repo_frame, text="https://github.com/tjqj/iptv_scrapers", 
+                             font=("黑体", 10), foreground="blue", cursor="hand2")
+        repo_link.pack(side='left')
+        repo_link.bind("<Button-1>", lambda e: self.open_url("https://github.com/tjqj/iptv_scrapers"))
+        
+        # 请求Star
+        star_frame = ttk.Frame(about_frame)
+        star_frame.pack(fill='x', pady=5)
+        
+        star_label = ttk.Label(star_frame, 
+                              text="如果您觉得这个工具有用，请在 GitHub 上给我一个Star ⭐", 
+                              font=("黑体", 10))
+        star_label.pack()
+        
+        # 联系作者
+        contact_label = ttk.Label(about_frame, text="联系作者: https://github.com/tjqj/iptv_scrapers/issues", font=("黑体", 10))
+        contact_label.pack(pady=5)
+
+        # 开源协议
+        license_label = ttk.Label(about_frame, text="开源协议: MIT License", font=("黑体", 10))
+        license_label.pack(pady=5)
+
+    
+    
+    def open_url(self, url):
+        """打开URL链接"""
+        import webbrowser
+        webbrowser.open(url)
 
     def export_valid_txt(self):
         if not self.last_result or 'accessible_urls' not in self.last_result:
@@ -81,12 +182,12 @@ class IPTVScraperGUI:
             )
 
     def create_progress_label(self):
-        log_frame = self.root.grid_slaves(row=2, column=0)[0]
+        log_frame = self.main_tab.grid_slaves(row=2, column=0)[0]
         self.progress_label = ttk.Label(log_frame, text="就绪")
         self.progress_label.pack(anchor="se")  # 固定在右下角
         
     def create_proxy_controls(self):
-        input_frame = self.root.grid_slaves(row=0, column=0)[0]
+        input_frame = self.main_tab.grid_slaves(row=0, column=0)[0]
         self.proxy_btn = ttk.Button(input_frame, text="设置代理", command=self.show_proxy_dialog)
         self.proxy_btn.grid(row=0, column=7, padx=5)
 
@@ -145,35 +246,43 @@ class IPTVScraperGUI:
             
     def create_widgets(self):
 
-        input_frame = ttk.Frame(self.root, padding="10")
+        input_frame = ttk.Frame(self.main_tab, padding="10")
         input_frame.grid(row=0, column=0, sticky="ew")
+        
+        # 设置main_tab的列权重，使其可以水平拉伸
+        self.main_tab.columnconfigure(0, weight=1)
+        self.main_tab.rowconfigure(1, weight=1)
 
         self.control_frame = ttk.Frame(input_frame)
         self.control_frame.grid(row=1, column=0, columnspan=8, sticky="ew", pady=5)
+        
+        # 设置input_frame的列权重，使其内部控件可以水平拉伸
+        for i in range(8):
+            input_frame.columnconfigure(i, weight=1)
 
         ttk.Label(input_frame, text="频道:").grid(row=0, column=0, sticky="w")
         self.city_entry = ttk.Entry(input_frame, width=20)
-        self.city_entry.grid(row=0, column=1, padx=5)
+        self.city_entry.grid(row=0, column=1, padx=5, sticky="ew")
 
         ttk.Label(input_frame, text="抓取深度:").grid(row=0, column=2, sticky="w")
         validate_cmd = input_frame.register(self.validate_spinbox_input)
         self.page_spin = ttk.Spinbox(input_frame, from_=1, to=self.max_page, width=5, validate="key",
                                      validatecommand=(validate_cmd, '%P'))
         self.page_spin.set(1)
-        self.page_spin.grid(row=0, column=3, padx=5)
+        self.page_spin.grid(row=0, column=3, padx=5, sticky="ew")
 
         self.random_mode_var = tk.BooleanVar(value=True)
         self.random_mode_check = ttk.Checkbutton(input_frame, text="随机模式", variable=self.random_mode_var)
-        self.random_mode_check.grid(row=0, column=4, padx=5)
+        self.random_mode_check.grid(row=0, column=4, padx=5, sticky="ew")
 
         self.speed_var = tk.BooleanVar()
         self.speed_check = ttk.Checkbutton(input_frame, text="启用测速", variable=self.speed_var)
-        self.speed_check.grid(row=0, column=5, padx=5)
+        self.speed_check.grid(row=0, column=5, padx=5, sticky="ew")
 
         self.start_btn = ttk.Button(input_frame, text="开始抓取", command=self.start_scraping)
-        self.start_btn.grid(row=0, column=6, padx=5)
+        self.start_btn.grid(row=0, column=6, padx=5, sticky="ew")
 
-        result_frame = ttk.LabelFrame(self.root, padding="10", text="频道列表")
+        result_frame = ttk.LabelFrame(self.main_tab, padding="10", text="频道列表")
         result_frame.grid(row=1, column=0, sticky="nsew")
 
         self.tree = ttk.Treeview(result_frame, columns=('channel', 'url', 'response'), show='headings')
@@ -189,13 +298,13 @@ class IPTVScraperGUI:
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
         self.tree.configure(yscrollcommand=scrollbar.set)
 
-        log_frame = ttk.LabelFrame(self.root, padding="10", text="日志信息")
+        log_frame = ttk.LabelFrame(self.main_tab, padding="10", text="日志信息")
         log_frame.grid(row=2, column=0, sticky="ew")
 
         self.log_area = scrolledtext.ScrolledText(log_frame, width=80, height=10)
         self.log_area.pack(fill=tk.BOTH, expand=True)
 
-        btn_frame = ttk.Frame(self.root, padding="10")
+        btn_frame = ttk.Frame(self.main_tab, padding="10")
         btn_frame.grid(row=3, column=0, sticky="e")
 
         self.export_txt_btn = ttk.Button(btn_frame, text="导出TXT",
@@ -210,11 +319,8 @@ class IPTVScraperGUI:
         self.save_btn = ttk.Button(btn_frame, text="导出全部节目", command=self.save_results, state=tk.DISABLED)
         self.save_btn.pack(side=tk.RIGHT, padx=5)
 
-        self.about_btn = ttk.Button(btn_frame, text="关于", command=self.show_about)
-        self.about_btn.pack(side=tk.RIGHT, padx=5)
-
-        self.root.columnconfigure(0, weight=1)
-        self.root.rowconfigure(1, weight=1)
+        self.main_tab.columnconfigure(0, weight=1)
+        self.main_tab.rowconfigure(1, weight=1)
 
         self.context_menu = tk.Menu(self.root, tearoff=0)
         self.context_menu.add_command(label="复制URL", command=self.copy_url)
@@ -228,7 +334,6 @@ class IPTVScraperGUI:
             return len(value) == 0 or value == ""
 
     def show_context_menu(self, event):
-        # 获取点击的item
         item = self.tree.identify_row(event.y)
         if item:
             self.tree.selection_set(item)
@@ -242,25 +347,7 @@ class IPTVScraperGUI:
             self.root.clipboard_append(url)
             logging.info(f"已复制URL：{url}")
 
-    def show_about(self):
-        about_text = f"""频道工具
-
-版本: {self.version}
-作者: Skye
-编译日期: 2025-03-24
-更新:
-- 新增了IPTV365抓取方式
-- 修复了hacks检测源异常的问题
-- 修复了性能问题
-
-开源地址: https://github.com/tjqj/iptv_scrapers
-
-免费软件声明：
-本软件为免费软件，仅供学习和研究使用。
-使用本软件时请遵守当地法律法规。
-开发者不对使用本软件产生的任何后果负责。
-禁止将本软件用于任何商业用途。"""
-        messagebox.showinfo("关于", about_text)
+    
 
     def export_valid_results(self):
         if not self.last_result or 'accessible_urls' not in self.last_result:
