@@ -6,6 +6,7 @@ from typing import List
 from base_scraper import BaseIPTVScraper, IPTVChannel
 from config import HACKS_HEADERS
 from urllib.parse import quote
+import brotli
 import time
 
 def generate_search_url(query: str) -> str:
@@ -86,44 +87,59 @@ class HacksScraper(BaseIPTVScraper):
             start_time = time.time()
             headers = self.headers.copy()
             headers['Accept-Encoding'] = 'gzip, deflate, br'
-            
-            # 设置更严格的超时控制
-            response = self.session.get(
+
+            # 检查URL是否为直接可用的非m3u8格式
+            if not channel.url.lower().endswith('.m3u8'):
+                direct_response = requests.get(
+                    channel.url,
+                    timeout=3,
+                    proxies=self.proxies if self.proxy_enabled else None,
+                    stream=True,
+                    allow_redirects=True,
+                    headers=headers,
+                    verify=False
+                )
+                
+                content_type = direct_response.headers.get('Content-Type', '').lower()
+                if direct_response.status_code in (200, 206) and any(x in content_type for x in ['video', 'audio', 'mpegurl']):
+                    channel.response_time = round(time.time() - start_time, 2)
+                    direct_response.close()
+                    return True
+                direct_response.close()
+
+            response = requests.get(
                 channel.url,
-                headers=headers,
-                timeout=3,  # 固定3秒超时
+                timeout=3,
                 proxies=self.proxies if self.proxy_enabled else None,
                 stream=False,
                 allow_redirects=True,
+                headers=headers,
                 verify=False
             )
             
             if response.status_code not in (200, 206):
                 return False
 
-            # 获取响应内容，但限制读取大小
-            try:
-                content = response.content[:128].decode('utf-8', errors='ignore')
+            content = self._decompress_response(response)
 
-            except Exception as e:
-                logging.info(f"内容解码错误: {channel.url}, {str(e)}")
-                # 如果解码失败但状态码正常，可能是二进制流，也认为是有效的
-                if response.status_code in (200, 206):
-                    channel.response_time = round(time.time() - start_time, 2)
-                    return True
-                return False
+            try:
+                decoded_content = content.decode('utf-8-sig')
+            except UnicodeDecodeError:
+                decoded_content = content.decode('utf-8', errors='replace')
+            
+            decoded_content = decoded_content.replace('\r\n', '\n')
             
             # 检查是否为M3U8格式
-            if '#EXTM3U' in content and '#EXT-X-STREAM-INF' in content:
+            if '#EXTM3U' in decoded_content:
+                channel.response_time = round(time.time() - start_time, 2)
                 
                 # 解析内容获取真实URL
-                lines = content.strip().split('\n')
+                lines = decoded_content.strip().split('\n')
                 for line in lines:
                     if line.startswith('http'):
                         real_url = line.strip()
                         # 更新channel的URL为真实地址
                         channel.url = real_url
-                        
                         # 测试真实URL
                         try:
                             real_response = self.session.get(
@@ -134,28 +150,20 @@ class HacksScraper(BaseIPTVScraper):
                                 stream=False
                             )
                             if real_response.status_code in (200, 206):
-                                channel.response_time = round(time.time() - start_time, 2)
                                 return True
                         except:
                             pass
                         break
+            else:
+                return False
             
-            # 如果有内容，视为可用
-            if content and len(content) > 10:
-                channel.response_time = round(time.time() - start_time, 2)
-                return True
-                
-            logging.info(f"无效内容: {channel.url}")
             return False
-            
+                
         except requests.exceptions.Timeout:
-            logging.info(f"请求超时: {channel.url}")
             return False
         except requests.exceptions.ConnectionError:
-            logging.info(f"连接错误: {channel.url}")
             return False
         except Exception as e:
-            logging.info(f"连接错误 {channel.url}: {str(e)}")
             return False
         finally:
             if response:
@@ -163,3 +171,18 @@ class HacksScraper(BaseIPTVScraper):
                     response.close()
                 except:
                     pass
+
+    def _decompress_response(self, response):
+        try:
+            if response.headers.get('Content-Encoding') == 'br':
+                # 添加分块解压处理
+                decompressor = brotli.Decompressor()
+                content = b""
+                for chunk in response.iter_content(chunk_size=1024):
+                    content += decompressor.process(chunk)
+                return content
+            return response.content
+        except brotli.error as e:
+            return response.content
+        except Exception as e:
+            return response.content

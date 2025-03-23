@@ -31,40 +31,55 @@ class SpeedTester:
             futures = {executor.submit(self._check_channel, channel): channel for channel in channels}
             
             try:
-                for future in as_completed(futures, timeout=10):  # 总体超时
+                # 添加进度停滞检测
+                last_completed = 0
+                last_progress_time = time.time()
+                stall_timeout = 6 
+                
+                # 使用as_completed而不是设置总体超时
+                for future in as_completed(futures):
+                    # 检查是否停滞
+                    current_time = time.time()
+                    if completed > last_completed:
+                        last_completed = completed
+                        last_progress_time = current_time
+                    elif current_time - last_progress_time > stall_timeout:
+                        logging.info(f"测速进度已停滞 {stall_timeout} 秒，终止当前批次测试")
+                        break
+                    
                     completed += 1
                     try:
-                        channel, is_accessible = future.result(timeout=5)  # 单个任务超时
+                        channel, is_accessible = future.result(timeout=3)  # 单个任务超时
                         if is_accessible:
                             accessible_channels.append(channel)
                     except TimeoutError:
-                        logging.warning(f"任务执行超时")
+                        logging.info(f"任务执行超时")
                     except Exception as e:
-                        logging.warning(f"测速任务异常: {str(e)}")
+                        logging.info(f"测速任务异常: {str(e)}")
                     finally:
                         if self.progress_callback:
                             self.progress_callback("测速中", completed, total)
-            except TimeoutError:
-                logging.error("测速总体执行超时")
+            except Exception as e:
+                logging.info(f"测速过程发生异常: {str(e)}")
             finally:
                 # 强制关闭所有任务
                 for future in futures:
                     future.cancel()
                 
-                # 立即关闭线程池，不等待任务完成
-                executor._threads.clear()
+                executor.shutdown(wait=False, cancel_futures=True)
                 futures.clear()
                 
                 # 更新进度
                 if self.progress_callback:
-                    self.progress_callback("测速完成", total, total)
+                    self.progress_callback("测速完成", completed, total)
         
         # 按响应时间排序
         accessible_channels.sort(key=lambda x: x.response_time)
-        logging.info(f"测速完成，共 {len(accessible_channels)}/{total} 个频道可用")
+        logging.info(f"测速完成，共 {len(accessible_channels)}/{completed} 个频道可用 (总计 {total} 个)")
         
         return accessible_channels, {
             "total": total,
+            "tested": completed,
             "accessible": len(accessible_channels)
         }
     

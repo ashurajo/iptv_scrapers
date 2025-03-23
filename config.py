@@ -1,5 +1,5 @@
 # 全局配置
-VERSION = "1.4.0"
+VERSION = "1.5.0"
 MAX_PAGE = 5
 
 # 日志配置
@@ -34,13 +34,7 @@ ALLINONE_HEADERS = {
     'Connection': 'keep-alive',
     'Upgrade-Insecure-Requests': '1',
 }
-# 可以继续添加其他源的请求头
-# OTHER_SOURCE_HEADERS = {
-#     **DEFAULT_HEADERS,
-#     'specific-header': 'value'
-# }
 
-# 在config.py中添加Hacks的请求头配置
 HACKS_HEADERS = {
     **DEFAULT_HEADERS,
     'Connection': 'keep-alive',
@@ -51,3 +45,14 @@ HACKS_HEADERS = {
     'Cache-Control': 'no-cache',
 }
 
+IPTV365_HEADERS = {
+    **DEFAULT_HEADERS,
+    'Content-Type': "application/json",
+    'Referer': "https://search.iptv365.org/"
+} 
+
+# 可以继续添加其他源的请求头
+# OTHER_SOURCE_HEADERS = {
+#     **DEFAULT_HEADERS,
+#     'specific-header': 'value'
+# }

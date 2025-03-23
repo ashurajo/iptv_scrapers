@@ -249,9 +249,11 @@ class IPTVScraperGUI:
 作者: Skye
 编译日期: 2025-03-20
 更新:
-1.新增了hacks抓取方式
-2.修复了进程池溢出的问题
-3.修复了tonkiang抓取方式
+- 新增了IPTV365抓取方式
+- 修复了hacks检测源异常的问题
+- 修复了性能问题
+
+开源地址: https://github.com/tjqj/iptv_scrapers
 
 免费软件声明：
 本软件为免费软件，仅供学习和研究使用。
@@ -376,11 +378,17 @@ class IPTVScraperGUI:
         # 更新界面元素
         if selected == "Tonkiang":
             self.page_spin.config(state="normal")
+            self.random_mode_check.config(state="normal")
             self.random_mode_var.set(True)
         elif selected == "Allinone":
             self.page_spin.config(state="normal")
+            self.random_mode_check.config(state="normal")
             self.random_mode_var.set(True)
         elif selected == "Hacks":
+            self.page_spin.config(state="disabled")
+            self.random_mode_check.config(state="disabled")
+            self.random_mode_var.set(False)
+        elif selected == "IPTV365":
             self.page_spin.config(state="disabled")
             self.random_mode_check.config(state="disabled")
             self.random_mode_var.set(False)

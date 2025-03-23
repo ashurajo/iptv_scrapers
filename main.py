@@ -15,6 +15,9 @@ from requests.adapters import HTTPAdapter
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+# 在文件顶部添加导入
+from iptv365_scraper import IPTV365Scraper
+
 def main():
     # 配置requests的连接池
     session = requests.Session()
@@ -47,10 +50,12 @@ def main():
     app = IPTVScraperGUI(root, version=VERSION, max_page=MAX_PAGE)
     
     # 创建多个抓取器实例
+    # 在scrapers字典中添加新的抓取器
     scrapers = {
         "Tonkiang": TonkiangScraper(),
         "Allinone": AllinoneScraper(),
-        "Hacks": HacksScraper()
+        "Hacks": HacksScraper(),
+        "IPTV365": IPTV365Scraper()
     }
 
     if hasattr(app, 'set_scrapers'):
