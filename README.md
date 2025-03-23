@@ -26,6 +26,7 @@ iptv_scrapers/
 │   ├── tonkiang_scraper.py 
 │   └── allinone_scraper.py
 │   └── hacks_scraper.py
+│   └── iptv365_scraper.py
 └── build/               # 打包输出目录
 ```
 ## 快速开始
