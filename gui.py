@@ -247,7 +247,7 @@ class IPTVScraperGUI:
 
 版本: {self.version}
 作者: Skye
-编译日期: 2025-03-20
+编译日期: 2025-03-24
 更新:
 - 新增了IPTV365抓取方式
 - 修复了hacks检测源异常的问题
